@@ -7,6 +7,7 @@ const Main = () => {
     <S.MainWrapper>
       테스트테스트
       <BtnFloating width={'100px'} height={'100px'}/>
+      <BtnFloating width={'100px'} height={'100px'}/>
     </S.MainWrapper>
   )
 }
