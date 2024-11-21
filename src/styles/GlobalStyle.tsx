@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { Global, css } from "@emotion/react";
+import { Global, css } from '@emotion/react';
 
 export const globalStyles = css`
   * {
@@ -40,9 +40,18 @@ export const globalStyles = css`
   select,
   table,
   textarea {
-    font-family: "AppleSDGothicNeoH00", "AppleSDGothicNeoB00", "AppleSDGothicNeoM00", 
-      "AppleSDGothicNeoR00", "AppleSDGothicNeoSB00", -apple-system, BlinkMacSystemFont,
-      "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+    font-family:
+      'AppleSDGothicNeoH00',
+      'AppleSDGothicNeoB00',
+      'AppleSDGothicNeoM00',
+      'AppleSDGothicNeoR00',
+      'AppleSDGothicNeoSB00',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Malgun Gothic',
+      '맑은 고딕',
+      helvetica,
+      sans-serif;
   }
 
   h1,
@@ -120,31 +129,33 @@ export const globalStyles = css`
     flex-direction: column;
     overflow: hidden;
     min-height: 100vh;
+    width: 100%;
+    min-width: 1366px;
   }
 
   @font-face {
-    font-family: "AppleSDGothicNeoH00";
-    src: url("/fonts/AppleSDGothicNeoH.ttf") format("truetype");
+    font-family: 'AppleSDGothicNeoH00';
+    src: url('/fonts/AppleSDGothicNeoH.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "AppleSDGothicNeoB00";
-    src: url("/fonts/AppleSDGothicNeoB.ttf") format("truetype");
+    font-family: 'AppleSDGothicNeoB00';
+    src: url('/fonts/AppleSDGothicNeoB.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "AppleSDGothicNeoR00";
-    src: url("/fonts/AppleSDGothicNeoR.ttf") format("truetype");
+    font-family: 'AppleSDGothicNeoR00';
+    src: url('/fonts/AppleSDGothicNeoR.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "AppleSDGothicNeoM00";
-    src: url("/fonts/AppleSDGothicNeoM.ttf") format("truetype");
+    font-family: 'AppleSDGothicNeoM00';
+    src: url('/fonts/AppleSDGothicNeoM.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "AppleSDGothicNeoSB00";
-    src: url("/fonts/AppleSDGothicNeoSB.ttf") format("truetype");
+    font-family: 'AppleSDGothicNeoSB00';
+    src: url('/fonts/AppleSDGothicNeoSB.ttf') format('truetype');
   }
 
   html {
@@ -154,6 +165,8 @@ export const globalStyles = css`
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
     scroll-behavior: smooth;
+
+    font-size: 62.5%;
   }
 
   body {
@@ -162,7 +175,6 @@ export const globalStyles = css`
     margin: 0;
     padding: 0;
 
-    font-size: 62.5%;
     scrollbar-width: none;
     justify-content: center;
     align-items: center;
