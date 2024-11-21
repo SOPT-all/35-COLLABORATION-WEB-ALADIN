@@ -56,10 +56,10 @@ export const globalStyles = css`
   }
 
   textarea {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    background-color: transparent;
     border: 0;
+
+    background-color: transparent;
+    backface-visibility: hidden;
     word-break: keep-all;
     word-wrap: break-word;
   }
@@ -101,8 +101,9 @@ export const globalStyles = css`
   iframe {
     overflow: hidden;
     margin: 0;
-    border: 0;
     padding: 0;
+    border: 0;
+
     vertical-align: top;
   }
 
@@ -156,12 +157,13 @@ export const globalStyles = css`
   }
 
   body {
-    font-size: 62.5%;
-    scrollbar-width: none;
+    display: flex;
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    display: flex;
+
+    font-size: 62.5%;
+    scrollbar-width: none;
     justify-content: center;
     align-items: center;
     scroll-behavior: smooth;

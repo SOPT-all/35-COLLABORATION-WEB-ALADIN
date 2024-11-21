@@ -4,6 +4,9 @@ import { BtnFloating } from '@assets/svgs'
 import { Hihi } from "@assets/svgs"
 
 const Main = () => {
+  console.log("hi");
+  console.log('hi');
+  console.log("hi");
   return (
     <S.MainWrapper>
       테스트테스트

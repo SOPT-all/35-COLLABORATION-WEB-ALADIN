@@ -39,6 +39,7 @@ module.exports = {
         allow: ['warn', 'error'],
       },
     ],
+    'prettier/prettier': 'error'
   },
   settings: {
     react: {
