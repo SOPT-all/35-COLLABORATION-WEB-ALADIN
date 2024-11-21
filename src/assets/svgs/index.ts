@@ -1,6 +1,7 @@
 export { default as BtnFFloating } from './BtnFFloating';
 export { default as BtnFloating } from './BtnFloating';
 export { default as Hihi } from './Hihi';
+export { default as IcRightarrowMediumTextgray40 } from './IcRightarrowMediumTextgray40';
 export { default as Img61 } from './Img61';
 export { default as Img62 } from './Img62';
 export { default as Img63 } from './Img63';
