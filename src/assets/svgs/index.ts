@@ -1,3 +1,10 @@
-export { default as BtnFFloating } from "./BtnFFloating";
-export { default as BtnFloating } from "./BtnFloating";
-export { default as Hihi } from "./Hihi";
+export { default as AladinLogo } from './AladinLogo';
+export { default as BtnFFloating } from './BtnFFloating';
+export { default as BtnFloating } from './BtnFloating';
+export { default as Hihi } from './Hihi';
+export { default as IcChevronSmallRight } from './IcChevronSmallRight';
+export { default as IcMenuSmallGray } from './IcMenuSmallGray';
+export { default as IcMypageGray } from './IcMypageGray';
+export { default as IcSearch } from './IcSearch';
+export { default as IcShoppingcartGray } from './IcShoppingcartGray';
+export { default as SerachUnder } from './SerachUnder';
