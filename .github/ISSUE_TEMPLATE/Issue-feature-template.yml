@@ -1,0 +1,31 @@
+name: ✨ 기능 추가
+description: 기능 추가시 해당 이슈 템플릿을 사용하여 이슈를 생성해주세요.
+title: "[feat] "
+labels: ["✨ feature"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        작성 예시 : "[feat] 버튼 컴포넌트 구현"
+  - type: textarea
+    id: feat-description
+    attributes:
+      label: 📄 작업 설명
+      description: 작업할 기능에 대한 설명을 작성해주세요.
+      placeholder: 설명을 작성해주세요.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: ✅ 작업할 내용
+      description: 할 일을 체크박스 형태로 작성해주세요.
+      placeholder: 최대한 세분화 하여 작성해주세요. 
+    validations:
+      required: true
+  - type: textarea
+    id: view-preview
+    attributes:
+      label: 🎨 뷰 미리보기
+      description: 작업하고자 하는 기능의 뷰를 참고할 수 있는 자료를 첨부해주세요.
+      placeholder: 참고 자료를 첨부해주세요. 

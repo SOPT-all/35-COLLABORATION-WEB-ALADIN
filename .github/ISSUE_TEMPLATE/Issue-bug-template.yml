@@ -1,0 +1,25 @@
+name: 🐛 버그 수정
+description: 버그 수정사항 작성시 해당 이슈 템플릿을 사용하여 이슈를 생성해주세요.
+title: "[fix] "
+labels: ["🐛 fix"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        작성 예시 : "[fix] 장바구니 조회 기능 버그 수정"
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 버그 설명
+      description: 버그가 언제, 어떻게 발생했는지 작성해주세요
+      placeholder: 설명을 작성해주세요.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 👍 정상 동작
+      description: 정상적인 동작에 대해 설명해주세요. 
+      placeholder: 설명을 작성해주세요.
+    validations:
+      required: true

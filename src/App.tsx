@@ -1,30 +1,28 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import Layout from "@pages/Layout/Layout"
-import Main from "@pages/Main/Main";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import Layout from '@pages/Layout/Layout';
+import Main from '@pages/Main/Main';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Layout/>,
+    path: '/',
+    element: <Layout />,
     children: [
       {
-        path: "/",
-        element : <Main/>
+        path: '/',
+        element: <Main />,
       },
-      
     ],
-    errorElement: <Navigate to={"/"}/>
-  }
-])
-
+    errorElement: <Navigate to={'/'} />,
+  },
+]);
 
 function App() {
   return (
     <>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
