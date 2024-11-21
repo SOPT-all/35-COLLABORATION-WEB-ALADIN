@@ -33,6 +33,12 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react-hooks/exhaustive-deps': 1,
     '@typescript-eslint/no-explicit-any': 0,
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
   },
   settings: {
     react: {
