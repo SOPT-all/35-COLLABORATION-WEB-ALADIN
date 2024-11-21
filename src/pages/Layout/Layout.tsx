@@ -1,13 +1,13 @@
 //import React from 'react'
-import * as S from "./Layout.styled"
-import { Outlet } from 'react-router-dom'
+import * as S from './Layout.styled';
+import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
     <S.LayoutWrapper>
-      <Outlet/>
+      <Outlet />
     </S.LayoutWrapper>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
