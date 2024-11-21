@@ -2,35 +2,38 @@
 import { css } from '@emotion/react';
 
 const colors = {
-  purple60:'#2925A0',
-  purple50:'#6358FA',
-  purple40:'#7A71FF',
-  purple20:'#E5E3FF',
-  purple10:'#F7F6FF',
-  
-  text_gray10:'#737373',
-  text_gray20:'#666666',
-  text_gray30:'#444444',
-  text_gray40:'#333333',
+  purple60: '#2925A0',
+  purple50: '#6358FA',
+  purple40: '#7A71FF',
+  purple20: '#E5E3FF',
+  purple10: '#F7F6FF',
 
-  white:'#FFFFFF',
-  bg_gray10:'#F3F3F5',
-  bg_banner_green:'#CAECC9',
+  text_gray10: '#737373',
+  text_gray20: '#666666',
+  text_gray30: '#444444',
+  text_gray40: '#333333',
 
-  stroke_gray10:'#E6E6E6',
-  stroke_gray20:'#DCDCDC',
-  stroke_gray30:'#E2E2E2',
-  stroke_gray40:'#BABABA',
-  stroke_gray50:'#9E9E9E',
-  stroke_gray60:'#808080',
+  white: '#FFFFFF',
+  bg_gray10: '#F3F3F5',
+  bg_banner_green: '#CAECC9',
+  bg_gray50: '#EDEFF1',
+  bg_gray90: '#2E2E2E',
 
-  ic_gray10:'#B3B3B3',
-  ic_gray20:'#B6B6B6',
-  ic_gray30:'#8E8E8E',
+  stroke_gray10: '#E6E6E6',
+  stroke_gray20: '#DCDCDC',
+  stroke_gray30: '#E2E2E2',
+  stroke_gray40: '#BABABA',
+  stroke_gray50: '#9E9E9E',
+  stroke_gray60: '#808080',
 
-  gradient_purple1:'linear-gradient(291deg, #6358FA 24.8%, #AFA9FF 85.51%)',
-  gradient2:'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F2F2F4 100%)',
-  
+  ic_gray10: '#B3B3B3',
+  ic_gray20: '#B6B6B6',
+  ic_gray30: '#8E8E8E',
+
+  gradient_purple1: 'linear-gradient(291deg, #6358FA 24.8%, #AFA9FF 85.51%)',
+  gradient2:
+    'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F2F2F4 100%)',
+
   tp_white50: 'rgba(255, 255, 255, 0.50)',
   tp_black50: 'rgba(0, 0, 0, 0.50)',
   tp_black70: 'rgba(0, 0, 0, 0.70)',
@@ -38,210 +41,210 @@ const colors = {
 };
 
 const fonts = {
-  'head_b_24': css`
-  font-family:"AppleSDGothicNeoB00";
+  head_b_24: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 2.4rem;
+    font-size: 2.4rem;
 
-  /* font-weight: 700; */
-  line-height: 3.2rem;
-  letter-spacing: 0%;
-`,
+    /* font-weight: 700; */
+    line-height: 3.2rem;
+    letter-spacing: 0%;
+  `,
 
-'title1_r_18': css`
-  font-family:"AppleSDGothicNeoR00";
+  title1_r_18: css`
+    font-family: 'AppleSDGothicNeoR00';
 
-  font-size: 1.8rem;
+    font-size: 1.8rem;
 
-  /* font-weight: 400; */
-  line-height: 3.5rem;
-  letter-spacing: -0.1rem;
-`,
-'title2_b_17': css`
-  font-family:"AppleSDGothicNeoB00";
+    /* font-weight: 400; */
+    line-height: 3.5rem;
+    letter-spacing: -0.1rem;
+  `,
+  title2_b_17: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 
-  /* font-weight: 700; */
-  line-height: 2.1rem;
-  letter-spacing: -0.05rem;
-`,
-'title3_b_15': css`
-  font-family:"AppleSDGothicNeoB00";
+    /* font-weight: 700; */
+    line-height: 2.1rem;
+    letter-spacing: -0.05rem;
+  `,
+  title3_b_15: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 
-  /* font-weight: 700; */
-  line-height: 1.8rem;
-  letter-spacing: -0.015rem;
-`,
-'title5_r_13': css`
-  font-family:"AppleSDGothicNeoR00";
+    /* font-weight: 700; */
+    line-height: 1.8rem;
+    letter-spacing: -0.015rem;
+  `,
+  title5_r_13: css`
+    font-family: 'AppleSDGothicNeoR00';
 
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 
-  /* font-weight: 400; */
-  line-height: 3.7rem;
-  letter-spacing: -0;
-`,
+    /* font-weight: 400; */
+    line-height: 3.7rem;
+    letter-spacing: -0;
+  `,
 
-'body1_b_15': css`
-  font-family:"AppleSDGothicNeoB00";
+  body1_b_15: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 
-  /* font-weight: 700; */
-  line-height: 1.8rem;
-  letter-spacing: -0.05rem;
-`,
-'body1_r_15': css`
-  font-family:"AppleSDGothicNeoR00";
+    /* font-weight: 700; */
+    line-height: 1.8rem;
+    letter-spacing: -0.05rem;
+  `,
+  body1_r_15: css`
+    font-family: 'AppleSDGothicNeoR00';
 
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 
-  /* font-weight: 400; */
-  line-height: 1.8rem;
-  letter-spacing: -0.05rem;
-`,
-'body2_b_14': css`
-  font-family:"AppleSDGothicNeoB00";
+    /* font-weight: 400; */
+    line-height: 1.8rem;
+    letter-spacing: -0.05rem;
+  `,
+  body2_b_14: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 
-  /* font-weight: 700; */
-  line-height: 2rem;
-  letter-spacing: -0.05rem;
-`,
-'body2_sb_14': css`
-  font-family:"AppleSDGothicNeoSB00";
+    /* font-weight: 700; */
+    line-height: 2rem;
+    letter-spacing: -0.05rem;
+  `,
+  body2_sb_14: css`
+    font-family: 'AppleSDGothicNeoSB00';
 
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 
-  /* font-weight: 600; */
-  line-height: 2rem;
-  letter-spacing: -0.05rem;
-`,
-'body5_b_13': css`
-  font-family:"AppleSDGothicNeoB00";
+    /* font-weight: 600; */
+    line-height: 2rem;
+    letter-spacing: -0.05rem;
+  `,
+  body5_b_13: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 
-  /* font-weight: 700; */
-  line-height: 1.8rem;
-  letter-spacing: -0.015rem;
-`,
-'body5_r_13': css`
-  font-family:"AppleSDGothicNeoR00";
+    /* font-weight: 700; */
+    line-height: 1.8rem;
+    letter-spacing: -0.015rem;
+  `,
+  body5_r_13: css`
+    font-family: 'AppleSDGothicNeoR00';
 
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 
-  /* font-weight: 400; */
-  line-height: 1.8rem;
-  letter-spacing: -0.015rem;
-`,
-'body7_b_12': css`
-  font-family:"AppleSDGothicNeoB00";
+    /* font-weight: 400; */
+    line-height: 1.8rem;
+    letter-spacing: -0.015rem;
+  `,
+  body7_b_12: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 
-  /* font-weight: 700; */
-  line-height: 1.8rem;
-  letter-spacing: -0.05rem;
-`,
-'body7_sb_12': css`
-  font-family:"AppleSDGothicNeoSB00";
+    /* font-weight: 700; */
+    line-height: 1.8rem;
+    letter-spacing: -0.05rem;
+  `,
+  body7_sb_12: css`
+    font-family: 'AppleSDGothicNeoSB00';
 
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 
-  /* font-weight: 600; */
-  line-height: 1.8rem;
-  letter-spacing: -0.05rem;
-`,
-'body7_m_12': css`
-  font-family:"AppleSDGothicNeoM00";
+    /* font-weight: 600; */
+    line-height: 1.8rem;
+    letter-spacing: -0.05rem;
+  `,
+  body7_m_12: css`
+    font-family: 'AppleSDGothicNeoM00';
 
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 
-  /* font-weight: 500; */
-  line-height: 1.5rem;
-  letter-spacing: 0;
-`,
-'body7_r_12': css`
-  font-family:"AppleSDGothicNeoR00";
+    /* font-weight: 500; */
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  `,
+  body7_r_12: css`
+    font-family: 'AppleSDGothicNeoR00';
 
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 
-  /* font-weight: 400; */
-  line-height: 1.8rem;
-  letter-spacing: -0.05rem;
-`,
-'body9_b_11': css`
-  font-family:"AppleSDGothicNeoB00";
+    /* font-weight: 400; */
+    line-height: 1.8rem;
+    letter-spacing: -0.05rem;
+  `,
+  body9_b_11: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 
-  /* font-weight: 700; */
-  line-height: 3.7rem;
-  letter-spacing: -0.05rem;
-`,
-'body10_sb_11': css`
-  font-family:"AppleSDGothicNeoSB00";
+    /* font-weight: 700; */
+    line-height: 3.7rem;
+    letter-spacing: -0.05rem;
+  `,
+  body10_sb_11: css`
+    font-family: 'AppleSDGothicNeoSB00';
 
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 
-  /* font-weight: 600; */
-  line-height: 1.5rem;
-  letter-spacing: 0;
-`,
-'body10_r_11': css`
-  font-family:"AppleSDGothicNeoR00";
+    /* font-weight: 600; */
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  `,
+  body10_r_11: css`
+    font-family: 'AppleSDGothicNeoR00';
 
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 
-  /* font-weight: 400; */
-  line-height: 1.5rem;
-  letter-spacing: 0;
-`,
-'body11_hvy_17': css`
-  font-family:"AppleSDGothicNeoH00";
+    /* font-weight: 400; */
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  `,
+  body11_hvy_17: css`
+    font-family: 'AppleSDGothicNeoH00';
 
-  font-size: 1.7rem;
+    font-size: 1.7rem;
 
-  /* font-weight: 800; */
-  line-height: 1.7rem;
-  letter-spacing: 0;
-`,
-'body12_sb_13': css`
-  font-family:"AppleSDGothicNeoSB00";
+    /* font-weight: 800; */
+    line-height: 1.7rem;
+    letter-spacing: 0;
+  `,
+  body12_sb_13: css`
+    font-family: 'AppleSDGothicNeoSB00';
 
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 
-  /* font-weight: 600; */
-  line-height: 1.5rem;
-  letter-spacing: 0;
-`,
+    /* font-weight: 600; */
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  `,
 
-'caption2_b_11': css`
-  font-family:"AppleSDGothicNeoB00";
+  caption2_b_11: css`
+    font-family: 'AppleSDGothicNeoB00';
 
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 
-  /* font-weight: 700; */
-  line-height: 1.8rem;
-  letter-spacing: -0.05rem;
-`,
-'caption4_sb_16': css`
-  font-family:"AppleSDGothicNeoSB00";
+    /* font-weight: 700; */
+    line-height: 1.8rem;
+    letter-spacing: -0.05rem;
+  `,
+  caption4_sb_16: css`
+    font-family: 'AppleSDGothicNeoSB00';
 
-  font-size: 1.6rem;
+    font-size: 1.6rem;
 
-  /* font-weight: 600; */
-  line-height: 2.0rem;
-  letter-spacing: 0;
-`,
+    /* font-weight: 600; */
+    line-height: 2rem;
+    letter-spacing: 0;
+  `,
 };
 
-const theme  = {
+const theme = {
   colors,
   fonts,
 };

@@ -8,3 +8,4 @@ export { default as IcMypageGray } from './IcMypageGray';
 export { default as IcSearch } from './IcSearch';
 export { default as IcShoppingcartGray } from './IcShoppingcartGray';
 export { default as SerachUnder } from './SerachUnder';
+export { default as XGroup2 } from './XGroup2';

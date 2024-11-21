@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './Header.styled';
 import {
   AladinLogo,
@@ -7,12 +7,16 @@ import {
   IcMypageGray,
   IcSearch,
   IcShoppingcartGray,
+  XGroup2,
 } from '@assets/svgs';
 import { SerachUnder } from '@assets/svgs';
 import { useNavigate } from 'react-router-dom';
+import { HEADER_MENU } from '@constants/headerMenuConstant';
 
 const Header = () => {
   const navigate = useNavigate();
+  const [isShow, setIsShow] = useState(false);
+
   return (
     <S.HeaderWrapper>
       <S.HeaderTop>
@@ -43,6 +47,7 @@ const Header = () => {
           <S.UserOptionDiv>고객센터</S.UserOptionDiv>
         </S.HeaderTopUserLayout>
       </S.HeaderTop>
+
       <S.HeaderSearch>
         <S.HeaderSearchLeft>
           <AladinLogo
@@ -79,8 +84,14 @@ const Header = () => {
           </S.HeaderRightItem>
         </S.HeaderSearchRight>
       </S.HeaderSearch>
+
       <S.HeaderBottom>
-        <S.SeeBtn onClick={() => {}}>
+        <S.SeeBtn
+          $isShow={isShow}
+          onClick={() => {
+            setIsShow(true);
+          }}
+        >
           <IcMenuSmallGray />
           분야 보기
         </S.SeeBtn>
@@ -98,6 +109,95 @@ const Header = () => {
           <S.HeaderBottomItem>창작 플랫폼</S.HeaderBottomItem>
         </S.HeaderBottomItemLayout>
       </S.HeaderBottom>
+      {isShow && (
+        <S.CloseBtn
+          onClick={() => {
+            setIsShow(false);
+          }}
+        >
+          <XGroup2 />
+        </S.CloseBtn>
+      )}
+      {isShow && (
+        <S.DropDownWrapper>
+          <S.DropDownLayout>
+            <S.FiveColBox $width="28.5rem">
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>국내도서</S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.domesticBooks.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>
+                  알라딘 굿즈
+                </S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.aladinGoods.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+            </S.FiveColBox>
+            <S.DivLine />
+            <S.FiveColBox $width="29.0rem">
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>외국도서</S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.foreignBooks.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+            </S.FiveColBox>
+            <S.DivLine />
+            <S.FiveColBox $width="14.3rem">
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>eBook</S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.eBooks.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+            </S.FiveColBox>
+            <S.DivLine />
+            <S.FiveColBox $width="14.8rem">
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>
+                  온라인중고
+                </S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.onlineCourses.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+            </S.FiveColBox>
+            <S.DivLine />
+            <S.FiveColBox $width="14.3rem">
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>음반</S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.music.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+              <S.DropDownCategoryBox>
+                <S.DroptDownCategoryHeader>블루레이</S.DroptDownCategoryHeader>
+                <S.DropDownCategoryBody>
+                  {HEADER_MENU.categories.bluRay.map((cate) => (
+                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  ))}
+                </S.DropDownCategoryBody>
+              </S.DropDownCategoryBox>
+            </S.FiveColBox>
+          </S.DropDownLayout>
+        </S.DropDownWrapper>
+      )}
     </S.HeaderWrapper>
   );
 };
