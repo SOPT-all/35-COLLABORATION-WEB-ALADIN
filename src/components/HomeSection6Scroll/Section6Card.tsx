@@ -13,12 +13,13 @@ import {
 } from '@assets/svgs';
 
 const Section6Card = () => {
+  //무언가 수정 ~
   return (
     <>
       <S.Section6CardWrapper>
         <S.Section6TitleLayout>
           <S.Title>알라딘이 만든 사은품</S.Title>
-          <IcRightarrowMediumTextgray40/>
+          <IcRightarrowMediumTextgray40 />
         </S.Section6TitleLayout>
         <S.Section6CardLayout>
           <S.Section6CardContainer>
