@@ -30,5 +30,4 @@ export const AddressBox = styled.div`
     display: flex;
     align-items: center;
     gap: 3.5rem;
-    background-color: gray;
 `;
