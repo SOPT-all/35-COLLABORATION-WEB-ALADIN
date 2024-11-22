@@ -13,7 +13,7 @@ export const HomeSectionWrapper = styled.div`
   width: 100vw;
   height: 55.7rem;
   flex-shrink: 0;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F4 100%);
+  background: linear-gradient(180deg, #FFF 0%, #F2F2F4 100%);
   cursor: default;
 `;
 
@@ -33,15 +33,17 @@ export const TitleMent = styled.div`
 
 export const Btn = styled.button`
   display: inline-flex;
-  height: 2.6rem;
   position: absolute;
-  align-items: center;
   right: 14.5rem; 
+  height: 2.6rem;
+  align-items: center;
   gap: 0.6rem;
   padding: 0.4rem 1rem;
   border: 1px solid ${theme.colors.stroke_gray30};
   border-radius: 9.9rem;
+
   background-color: ${theme.colors.white};
+
   color: ${theme.colors.text_gray10};
   ${theme.fonts.body5_r_13};
   line-height: 0%;
@@ -74,15 +76,18 @@ export const SalePrice = styled.div`
   left: -1.25rem;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 0.5rem 1.1rem 0.5rem;
+  padding: 1.5rem 0.5rem 1.1rem;
   border-radius: 9.9rem;
+
   background-color: ${theme.colors.purple50};
+
   color: ${theme.colors.white};
   ${theme.fonts.head_b_24};
 `;
 
 export const ImgTitle = styled.p`
   margin-top: 3.6rem;
+
   color: ${theme.colors.text_gray30};
   ${theme.fonts.title3_b_15};
 `;
@@ -92,6 +97,7 @@ export const ImgPrice = styled.div`
   width: 17.8rem;
   align-items: center;
   justify-content: flex-start;
+
   color: ${theme.colors.purple50};
   ${theme.fonts.title3_b_15}; 
   white-space: nowrap;
@@ -99,12 +105,14 @@ export const ImgPrice = styled.div`
   p{
     margin-right: 0.4rem;
     margin-left: 3.3rem;
+
     color: ${theme.colors.text_gray40};
   }
 `;
 
 export const RealPrice = styled.div`
   position: relative;
+
   color: ${theme.colors.stroke_gray40};
   ${theme.fonts.title3_b_15};
 `;
@@ -124,6 +132,7 @@ export const ProgressLayout = styled.div`
   ${commonFlexCenter}
   width: 100vw;
   gap:3.8rem;
+
   background-color: ${theme.colors.white};
 `;
 
@@ -131,6 +140,7 @@ export const ProgressMent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
   color: ${theme.colors.text_gray20};
   ${theme.fonts.body5_b_13};
 
@@ -170,7 +180,9 @@ export const ProgressFocus = styled.div`
   width: 10.9rem;
   height: 3.4rem;
   border-radius: 2rem;
+
   background-color: ${theme.colors.purple50};
+
   color: ${theme.colors.white};
   line-height: 0%;
 `;
