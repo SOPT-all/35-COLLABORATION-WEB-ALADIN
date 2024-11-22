@@ -7,4 +7,5 @@ export const StyledBtn = styled.button`
     ${theme.fonts.body10_sb_11};
     padding: 0.4rem 0.6rem;
     border-radius: 0.5rem;
+    white-space: nowrap;
 `;
