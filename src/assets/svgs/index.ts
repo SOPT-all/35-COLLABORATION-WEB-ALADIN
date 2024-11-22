@@ -1,3 +1,11 @@
-export { default as BtnFFloating } from "./BtnFFloating";
-export { default as BtnFloating } from "./BtnFloating";
-export { default as Hihi } from "./Hihi";
+export { default as BtnFFloating } from './BtnFFloating';
+export { default as BtnFloating } from './BtnFloating';
+export { default as Hihi } from './Hihi';
+export { default as IcArrowSaleBefore } from './IcArrowSaleBefore';
+export { default as IcRightarrowSmall } from './IcRightarrowSmall';
+export { default as Img11 } from './Img11';
+export { default as Img12 } from './Img12';
+export { default as Img13 } from './Img13';
+export { default as Img14 } from './Img14';
+export { default as Playno } from './Playno';
+export { default as Playyes } from './Playyes';

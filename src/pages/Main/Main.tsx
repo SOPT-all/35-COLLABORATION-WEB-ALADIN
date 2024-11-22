@@ -1,16 +1,11 @@
 //import React from 'react'
 import * as S from "./Main.styled"
-import { BtnFloating } from '@assets/svgs'
-import { Hihi } from "@assets/svgs"
+import HomeSection1 from "@components/homeSection1/homeSection1";
 
 const Main = () => {
-  console.log("hi");
-  console.log('hi');
-  console.log("hi");
   return (
     <S.MainWrapper>
-      테스트테스트
-      <BtnFloating width={'100px'} height={'100px'}/>
+      <HomeSection1 />
     </S.MainWrapper>
   )
 }
