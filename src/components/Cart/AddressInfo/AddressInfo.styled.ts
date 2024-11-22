@@ -10,6 +10,7 @@ export const AddressInfoContainer = styled.div`
     gap: 0.9rem;
     max-width: 25rem;
     border-radius: 10px;
+    color: ${theme.colors.text_gray40};
 `;
 
 
