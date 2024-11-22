@@ -14,8 +14,8 @@ export const Section6TitleLayout = styled.div`
 `;
 
 export const Title = styled.h3`
-  ${(props) => props.theme.fonts.head_b_24};
-  color: ${(props) => props.theme.colors.text_gray40};
+  ${({ theme }) => theme.fonts.head_b_24};
+  color: ${({ theme }) => theme.colors.text_gray40};
 `;
 
 export const Section6CardLayout = styled.div`
@@ -37,9 +37,9 @@ export const Section6CardContainer = styled.div`
 `;
 
 export const CardLabel = styled.p`
-  ${(props) => props.theme.fonts.body1_b_15}
-  color: ${(props) => props.theme.colors.text_gray40};
-  background-color: ${(props) => props.theme.colors.tp_white50};
+  ${({ theme }) => theme.fonts.body1_b_15};
+  color: ${({ theme }) => theme.colors.text_gray40};
+  background-color: ${({ theme }) => theme.colors.tp_white50};
   display: flex;
   align-items: center;
   width: 100%;
