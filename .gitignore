@@ -26,3 +26,19 @@ dist-ssr
 
 #각자 알아서 env 파일 만들고 관리하기 !
 .env
+
+### yarn ###
+# used Zero-Install
+/.yarn
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+install-state.gz
+tsconfig.node.tsbuildinfo
+tsconfig.tsbuildinfo
+vite.config.d.ts
+vite.config.js

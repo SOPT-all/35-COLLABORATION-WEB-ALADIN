@@ -7,7 +7,7 @@ const Main = () => {
     <S.MainWrapper>
       <HomeSection1 />
     </S.MainWrapper>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
