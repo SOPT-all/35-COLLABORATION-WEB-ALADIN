@@ -13,12 +13,12 @@ export const StyledBtn = styled.button`
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
-    width 0.3s ease,
-    height 0.3s ease;
+    transform 0.3s ease;
+
+  transform-origin: center;
 
   &:active {
-    width: 23.6rem;
-    height: 5.2rem;
+    transform: scale(0.96);
 
     background-color: ${theme.colors.purple60};
 
