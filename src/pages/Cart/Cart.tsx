@@ -35,13 +35,21 @@ const cartItems = [
 ];
 
 const Cart = () => {
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const totalDiscountedPrice = cartItems.reduce(
+    (acc, item) => acc + item.discountedPrice,
+    0,
+  );
+
+  const totalQty = cartItems.length;
+
   return (
     <S.CartWrapper>
       <h1>장바구니</h1>
       <ShippingInfo />
       <S.CartContainer>
         <S.ItemBox>
-          <CartListHeader />
+          <CartListHeader totalQty={totalQty} aladinDeliveryQty={totalQty} />
           <div>
             <CartItemHeader />
             {cartItems.map((item) => (
@@ -56,16 +64,18 @@ const Cart = () => {
               />
             ))}
           </div>
-          <S.PriceBox>46,620원 (2) + 배송비 무료</S.PriceBox>
+          <S.PriceBox>
+            {totalPrice.toLocaleString()}원 ({totalQty}) + 배송비 무료
+          </S.PriceBox>
         </S.ItemBox>
         <S.DeliveryBox>
           <AddressInfo />
           <PriceInfo
-            productPrice={40000}
-            discountPrice={1000}
-            totalPrice={46620}
+            productPrice={totalPrice}
+            discountPrice={totalPrice - totalDiscountedPrice}
+            totalPrice={totalDiscountedPrice}
           />
-          <OrderBtn totalItems={cartItems.length} totalPrice={46600} />
+          <OrderBtn totalItems={totalQty} totalPrice={totalPrice} />
         </S.DeliveryBox>
       </S.CartContainer>
     </S.CartWrapper>
