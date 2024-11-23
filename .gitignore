@@ -38,3 +38,7 @@ dist-ssr
 !.yarn/versions
 
 install-state.gz
+tsconfig.node.tsbuildinfo
+tsconfig.tsbuildinfo
+vite.config.d.ts
+vite.config.js
