@@ -10,4 +10,5 @@ export const StyledBtn = styled.button`
   border-radius: 0.5rem;
 
   white-space: nowrap;
+  cursor: pointer;
 `;
