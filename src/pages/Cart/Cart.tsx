@@ -8,6 +8,7 @@ import ShippingInfo from '@components/Cart/ShippingInfo/ShippingInfo';
 import * as S from './Cart.styled';
 import OrderBtn from '@components/Cart/OrderBtn/OrderBtn';
 
+// dummy data
 const cartItems = [
   {
     id: 1,
@@ -40,8 +41,10 @@ const Cart = () => {
     new Set(cartItems.map((item) => item.id)),
   );
 
+  const isAllSelected = selectedItems.size === cartItems.length;
+
   const handleSelectAll = () => {
-    if (selectedItems.size === cartItems.length) {
+    if (isAllSelected) {
       setSelectedItems(new Set());
     } else {
       setSelectedItems(new Set(cartItems.map((item) => item.id)));
@@ -49,25 +52,29 @@ const Cart = () => {
   };
 
   const handleSelectItem = (id: number) => {
-    const newSelectedItems = new Set(selectedItems);
-    if (newSelectedItems.has(id)) {
-      newSelectedItems.delete(id);
+    const updatedItems = new Set(selectedItems);
+    if (updatedItems.has(id)) {
+      updatedItems.delete(id);
     } else {
-      newSelectedItems.add(id);
+      updatedItems.add(id);
     }
-    setSelectedItems(newSelectedItems);
+    setSelectedItems(updatedItems);
   };
 
-  const selectedItems = cartItems.filter((item) => selectedItems.has(item.id));
+  const totalQty = cartItems.length;
 
-  const totalPrice = selectedItems.reduce((acc, item) => acc + item.price, 0);
-
-  const totalDiscountedPrice = selectedItems.reduce(
+  const selectedCartItems = cartItems.filter((item) =>
+    selectedItems.has(item.id),
+  );
+  const selectedTotalPrice = selectedCartItems.reduce(
+    (acc, item) => acc + item.price,
+    0,
+  );
+  const selectedTotalDiscountedPrice = selectedCartItems.reduce(
     (acc, item) => acc + item.discountedPrice,
     0,
   );
-
-  const totalQty = selectedItems.length;
+  const selectedQty = selectedCartItems.length;
 
   return (
     <S.CartWrapper>
@@ -79,11 +86,12 @@ const Cart = () => {
             totalQty={totalQty}
             aladinDeliveryQty={totalQty}
             onSelectAll={handleSelectAll}
+            isAllSelected={isAllSelected}
             selectedItems={selectedItems}
           />
           <div>
             <CartItemHeader
-              checked={selectedItems.size === cartItems.length}
+              checked={isAllSelected}
               onChange={handleSelectAll}
             />
             {cartItems.map((item) => (
@@ -101,17 +109,21 @@ const Cart = () => {
             ))}
           </div>
           <S.PriceBox>
-            {totalDiscountedPrice.toLocaleString()}원 ({totalQty}) + 배송비 무료
+            {selectedTotalPrice.toLocaleString()}원 ({selectedQty}) + 배송비
+            무료
           </S.PriceBox>
         </S.ItemBox>
         <S.DeliveryBox>
           <AddressInfo />
           <PriceInfo
-            productPrice={totalPrice}
-            discountPrice={totalPrice - totalDiscountedPrice}
-            totalPrice={totalDiscountedPrice}
+            productPrice={selectedTotalPrice}
+            discountPrice={selectedTotalPrice - selectedTotalDiscountedPrice}
+            totalPrice={selectedTotalDiscountedPrice}
           />
-          <OrderBtn totalItems={totalQty} totalPrice={totalDiscountedPrice} />
+          <OrderBtn
+            totalItems={selectedQty}
+            totalPrice={selectedTotalDiscountedPrice}
+          />
         </S.DeliveryBox>
       </S.CartContainer>
     </S.CartWrapper>

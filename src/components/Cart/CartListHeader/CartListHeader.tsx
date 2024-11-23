@@ -1,11 +1,13 @@
 import CheckboxBtn from '../CheckboxBtn/CheckboxBtn';
 import * as S from './CartListHeader.styled';
+import CartSmallBtn from '../CartSmallBtn/CartSmallBtn';
 
 interface CartListHeaderProps {
   totalQty: number;
   aladinDeliveryQty: number;
   onSelectAll: () => void;
   selectedItems: Set<number>;
+  isAllSelected: boolean;
 }
 
 const CartListHeader = ({
@@ -13,9 +15,9 @@ const CartListHeader = ({
   aladinDeliveryQty,
   onSelectAll,
   selectedItems,
-}: CartListHeaderProps) => {
-  const isAllSelected = selectedItems.size === totalQty;
 
+  isAllSelected,
+}: CartListHeaderProps) => {
   return (
     <S.CartListHeaderWrapper>
       <S.CartListHeaderContainer>
@@ -30,6 +32,7 @@ const CartListHeader = ({
           <span>판매자 배송 0</span>
         </S.DeliveryLabelBox>
       </S.CartListHeaderContainer>
+      <CartSmallBtn text="선택 삭제" />
     </S.CartListHeaderWrapper>
   );
 };
