@@ -1,11 +1,12 @@
 //import React from 'react'
-import Section6Card from '@components/HomeSection6Scroll/Section6Card';
+import * as S from "./Main.styled"
+import HomeSection1 from "@components/homeSection1/homeSection1";
 
 const Main = () => {
   return (
-    <>
-      <Section6Card />;
-    </>
+    <S.MainWrapper>
+      <HomeSection1 />
+    </S.MainWrapper>
   );
 };
 

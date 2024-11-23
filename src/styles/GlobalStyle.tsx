@@ -154,6 +154,7 @@ export const globalStyles = css`
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
     scroll-behavior: smooth;
+    font-size: 62.5%;
   }
 
   body {
@@ -162,7 +163,6 @@ export const globalStyles = css`
     margin: 0;
     padding: 0;
 
-    font-size: 62.5%;
     scrollbar-width: none;
     justify-content: center;
     align-items: center;
