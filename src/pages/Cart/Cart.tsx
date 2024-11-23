@@ -58,13 +58,16 @@ const Cart = () => {
     setSelectedItems(newSelectedItems);
   };
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
-  const totalDiscountedPrice = cartItems.reduce(
+  const selectedItems = cartItems.filter((item) => selectedItems.has(item.id));
+
+  const totalPrice = selectedItems.reduce((acc, item) => acc + item.price, 0);
+
+  const totalDiscountedPrice = selectedItems.reduce(
     (acc, item) => acc + item.discountedPrice,
     0,
   );
 
-  const totalQty = cartItems.length;
+  const totalQty = selectedItems.length;
 
   return (
     <S.CartWrapper>
@@ -80,7 +83,7 @@ const Cart = () => {
           />
           <div>
             <CartItemHeader
-              checked={selectedItems.size === totalQty}
+              checked={selectedItems.size === cartItems.length}
               onChange={handleSelectAll}
             />
             {cartItems.map((item) => (
