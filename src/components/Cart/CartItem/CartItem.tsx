@@ -9,6 +9,8 @@ interface CartItemProps {
   price: number;
   discountedPrice: number;
   imageUrl: string;
+  selected: boolean;
+  onSelectItem: (id: number) => void;
 }
 
 const CartItem = ({
@@ -18,11 +20,13 @@ const CartItem = ({
   price,
   discountedPrice,
   imageUrl,
+  selected,
+  onSelectItem,
 }: CartItemProps) => {
   return (
     <S.CartItemContainer>
       <S.ToggleBox>
-        <CheckboxBtn />
+        <CheckboxBtn checked={selected} onChange={() => onSelectItem(id)} />
         <img
           src={imageUrl}
           alt={name}

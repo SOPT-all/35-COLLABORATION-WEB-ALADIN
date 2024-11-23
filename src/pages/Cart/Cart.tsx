@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AddressInfo from '@components/Cart/AddressInfo/AddressInfo';
 import CartItem from '@components/Cart/CartItem/CartItem';
 import CartItemHeader from '@components/Cart/CartItemHeader/CartItemHeader';
@@ -35,6 +36,28 @@ const cartItems = [
 ];
 
 const Cart = () => {
+  const [selectedItems, setSelectedItems] = useState(
+    new Set(cartItems.map((item) => item.id)),
+  );
+
+  const handleSelectAll = () => {
+    if (selectedItems.size === cartItems.length) {
+      setSelectedItems(new Set());
+    } else {
+      setSelectedItems(new Set(cartItems.map((item) => item.id)));
+    }
+  };
+
+  const handleSelectItem = (id: number) => {
+    const newSelectedItems = new Set(selectedItems);
+    if (newSelectedItems.has(id)) {
+      newSelectedItems.delete(id);
+    } else {
+      newSelectedItems.add(id);
+    }
+    setSelectedItems(newSelectedItems);
+  };
+
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
   const totalDiscountedPrice = cartItems.reduce(
     (acc, item) => acc + item.discountedPrice,
@@ -49,9 +72,17 @@ const Cart = () => {
       <ShippingInfo />
       <S.CartContainer>
         <S.ItemBox>
-          <CartListHeader totalQty={totalQty} aladinDeliveryQty={totalQty} />
+          <CartListHeader
+            totalQty={totalQty}
+            aladinDeliveryQty={totalQty}
+            onSelectAll={handleSelectAll}
+            selectedItems={selectedItems}
+          />
           <div>
-            <CartItemHeader />
+            <CartItemHeader
+              checked={selectedItems.size === totalQty}
+              onChange={handleSelectAll}
+            />
             {cartItems.map((item) => (
               <CartItem
                 key={item.id}
@@ -61,11 +92,13 @@ const Cart = () => {
                 price={item.price}
                 discountedPrice={item.discountedPrice}
                 imageUrl={item.imageUrl}
+                selected={selectedItems.has(item.id)}
+                onSelectItem={handleSelectItem}
               />
             ))}
           </div>
           <S.PriceBox>
-            {totalPrice.toLocaleString()}원 ({totalQty}) + 배송비 무료
+            {totalDiscountedPrice.toLocaleString()}원 ({totalQty}) + 배송비 무료
           </S.PriceBox>
         </S.ItemBox>
         <S.DeliveryBox>
@@ -75,7 +108,7 @@ const Cart = () => {
             discountPrice={totalPrice - totalDiscountedPrice}
             totalPrice={totalDiscountedPrice}
           />
-          <OrderBtn totalItems={totalQty} totalPrice={totalPrice} />
+          <OrderBtn totalItems={totalQty} totalPrice={totalDiscountedPrice} />
         </S.DeliveryBox>
       </S.CartContainer>
     </S.CartWrapper>
