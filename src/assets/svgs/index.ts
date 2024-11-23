@@ -19,3 +19,4 @@ export { default as Img13 } from './Img13';
 export { default as Img14 } from './Img14';
 export { default as Playno } from './Playno';
 export { default as Playyes } from './Playyes';
+export { default as IcCheckbox } from './IcCheckbox';
