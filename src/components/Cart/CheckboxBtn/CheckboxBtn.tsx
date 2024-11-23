@@ -1,6 +1,6 @@
-import { useState } from "react";
-import SvgIcCheckbox from "@assets/svgs/IcCheckbox";
-import * as S from "./Checkbox.styled";
+import { useState } from 'react';
+import SvgIcCheckbox from '@assets/svgs/IcCheckbox';
+import * as S from './Checkbox.styled';
 
 const CheckboxBtn = () => {
   const [isChecked, setIsChecked] = useState(false);

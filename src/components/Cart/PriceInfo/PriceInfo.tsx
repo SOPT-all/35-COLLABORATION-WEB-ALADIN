@@ -2,12 +2,16 @@ import theme from '@styles/theme';
 import * as S from './PriceInfo.styled';
 
 interface PriceInfoProps {
-  productPrice: number; 
+  productPrice: number;
   discountPrice: number;
   totalPrice: number;
 }
 
-const PriceInfo = ({ productPrice, discountPrice, totalPrice }: PriceInfoProps) => {
+const PriceInfo = ({
+  productPrice,
+  discountPrice,
+  totalPrice,
+}: PriceInfoProps) => {
   return (
     <S.PriceInfoWrapper>
       <S.PriceInfoContainer>
