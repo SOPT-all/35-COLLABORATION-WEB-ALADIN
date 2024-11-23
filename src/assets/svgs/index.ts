@@ -10,7 +10,6 @@ export { default as Img67 } from './Img67';
 export { default as Img68 } from './Img68';
 export { default as Img69 } from './Img69';
 export { default as AladinLogo } from './AladinLogo';
-export { default as BtnFFloating } from './BtnFFloating';
 export { default as BtnFloating } from './BtnFloating';
 export { default as Hihi } from './Hihi';
 export { default as IcArrowSaleBefore } from './IcArrowSaleBefore';
