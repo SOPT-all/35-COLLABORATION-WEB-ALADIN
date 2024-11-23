@@ -1,6 +1,12 @@
 export { default as BtnFFloating } from './BtnFFloating';
 export { default as BtnFloating } from './BtnFloating';
 export { default as Hihi } from './Hihi';
+export { default as HomeSection2Indicator } from './HomeSection2Indicator';
 export { default as Img81 } from './Img81';
 export { default as Img82 } from './Img82';
 export { default as Img83 } from './Img83';
+export { default as Img91 } from './Img91';
+export { default as Img92 } from './Img92';
+export { default as Img93 } from './Img93';
+export { default as Img94 } from './Img94';
+export { default as Img95 } from './Img95';
