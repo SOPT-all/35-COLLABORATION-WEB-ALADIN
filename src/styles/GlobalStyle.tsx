@@ -129,6 +129,8 @@ export const globalStyles = css`
     flex-direction: column;
     overflow: hidden;
     min-height: 100vh;
+    width: 100%;
+    min-width: 1366px;
   }
 
   @font-face {

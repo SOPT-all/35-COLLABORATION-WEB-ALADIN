@@ -5,6 +5,9 @@ export const StyledBtn = styled.button`
   width: 25rem;
   height: 5.6rem;
 
+  width: 25rem;
+  height: 5.6rem;
+
   background-color: ${theme.colors.purple50};
   border-radius: 10px;
 
