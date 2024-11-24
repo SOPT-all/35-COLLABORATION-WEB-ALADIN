@@ -1,7 +1,12 @@
-import * as S from "./homeSection1.styled";
-import { IcRightarrowSmall, IcArrowSaleBefore, Playno, Playyes } from "@assets/svgs";
-import { useState, useEffect } from "react";
-import { books } from "../../constants/books";
+import * as S from './homeSection1.styled';
+import {
+  IcRightarrowSmall,
+  IcArrowSaleBefore,
+  Playno,
+  Playyes,
+} from '@assets/svgs';
+import { useState, useEffect } from 'react';
+import { books } from '../../constants/books';
 
 const HomeSection1 = () => {
   const [progress, setProgress] = useState(0);
@@ -9,23 +14,24 @@ const HomeSection1 = () => {
 
   useEffect(() => {
     let interval: number | undefined;
-  
+
     if (isPlaying) {
-      interval = window.setInterval(() => { 
+      interval = window.setInterval(() => {
         setProgress((prev) => {
-          if (prev >= 100) return 0;
+          if (prev >= 100) {
+            return 0;
+          }
           return prev + 1;
         });
       }, 100);
     }
-  
+
     return () => {
       if (interval) {
         clearInterval(interval);
       }
     };
   }, [isPlaying]);
-  
 
   const handleProgress = () => {
     setIsPlaying((prev) => !prev);
@@ -52,7 +58,8 @@ const HomeSection1 = () => {
                 <S.ArrowIcon>
                   <IcArrowSaleBefore />
                 </S.ArrowIcon>
-              </S.RealPrice><p>최저</p>
+              </S.RealPrice>
+              <p>최저</p>
               {book.lowestPrice}
             </S.ImgPrice>
             <S.ImgWriter>{book.author}</S.ImgWriter>
@@ -62,18 +69,18 @@ const HomeSection1 = () => {
       <S.ProgressLayout>
         <S.ProgressMent>
           <S.ProgressBar style={{ width: `${progress}%` }} />
-          <div style={{display:'flex'}}>
-          <S.ProgressBox>
-            <S.ProgressFocus>중고 종합 베스트</S.ProgressFocus>
-            <p>중고 이번주 베스트</p>
-            <p>중고 어제 베스트</p>
-            <p>품절/절판 베스트</p>
-            <p>최종 땡처리</p>
-            <p>화제의 책</p>
-          </S.ProgressBox>
-          <S.PlayBtn onClick={handleProgress}>
+          <div style={{ display: 'flex' }}>
+            <S.ProgressBox>
+              <S.ProgressFocus>중고 종합 베스트</S.ProgressFocus>
+              <p>중고 이번주 베스트</p>
+              <p>중고 어제 베스트</p>
+              <p>품절/절판 베스트</p>
+              <p>최종 땡처리</p>
+              <p>화제의 책</p>
+            </S.ProgressBox>
+            <S.PlayBtn onClick={handleProgress}>
               {isPlaying ? <Playno /> : <Playyes />}
-          </S.PlayBtn>
+            </S.PlayBtn>
           </div>
         </S.ProgressMent>
       </S.ProgressLayout>
