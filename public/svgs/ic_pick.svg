@@ -1,0 +1,13 @@
+<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ic_pick">
+<path id="Rectangle 845" d="M10.6064 0L21.213 10.6066L13.6064 18.2132L10.6064 18.2132L7.60645 18.2132L-0.000156224 10.6066L10.6064 0Z" fill="#6358FA"/>
+<path id="Vector 6921" d="M6.60645 11L9.10645 13.5L14.1064 8.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 6920" d="M2.60645 18L17.6064 18" stroke="url(#paint0_linear_1562_3507)" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1562_3507" x1="13.6123" y1="18.8005" x2="13.2326" y2="16.6514" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6358FA"/>
+<stop offset="1" stop-color="#AFA9FF"/>
+</linearGradient>
+</defs>
+</svg>
