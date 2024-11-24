@@ -4,6 +4,7 @@ import Layout from '@pages/Layout/Layout';
 import Main from '@pages/Main/Main';
 import Cart from '@pages/Cart/Cart';
 import HomeSection9 from '@components/Main/HomeSection9/HomeSection9';
+import HomeSection8 from '@components/Main/HomeSection8/HomeSection8';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: '/test',
+        path: '/',
+        element: <HomeSection8 />,
+      },
+      {
+        path: '/',
         element: <HomeSection9 />,
       },
     ],

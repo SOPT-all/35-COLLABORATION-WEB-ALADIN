@@ -29,12 +29,13 @@ __metadata:
     globals: "npm:^15.11.0"
     postcss-styled-syntax: "npm:^0.7.0"
     postcss-syntax: "npm:^0.36.2"
-    prettier: "npm:^3.2.5"
+    prettier: "npm:^3.3.3"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-router-dom: "npm:^6.28.0"
-    stylelint: "npm:^16.5.0"
+    stylelint: "npm:^16.10.0"
     stylelint-config-clean-order: "npm:^5.4.2"
+    stylelint-config-property-sort-order-smacss: "npm:^10.0.0"
     stylelint-config-standard: "npm:^36.0.1"
     stylelint-config-styled-components: "npm:^0.1.1"
     stylelint-order: "npm:^6.0.4"
@@ -2114,6 +2115,13 @@ __metadata:
   version: 3.2.3
   resolution: "css-functions-list@npm:3.2.3"
   checksum: 10c0/03f9ed34eeed310d2b1cf0e524eea02bc5f87854a4de85f8957ea432ab1036841a3fb00879590519f7bb8fda40d992ce7a72fa9b61696ca1dc53b90064858f96
+  languageName: node
+  linkType: hard
+
+"css-property-sort-order-smacss@npm:~2.2.0":
+  version: 2.2.0
+  resolution: "css-property-sort-order-smacss@npm:2.2.0"
+  checksum: 10c0/1bd79398787c9150cd36ebd41fc216c5682904609277ec5df6a0fb3ed456f0dedaab66953b9e6a8a4b01fe5ecf970fec849379904abec9bf0bb637eef5059c51
   languageName: node
   linkType: hard
 
@@ -4540,7 +4548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.2.5":
+"prettier@npm:^3.3.3":
   version: 3.3.3
   resolution: "prettier@npm:3.3.3"
   bin:
@@ -5186,6 +5194,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"stylelint-config-property-sort-order-smacss@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "stylelint-config-property-sort-order-smacss@npm:10.0.0"
+  dependencies:
+    css-property-sort-order-smacss: "npm:~2.2.0"
+    stylelint-order: "npm:^6.0.4"
+  peerDependencies:
+    stylelint: ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 10c0/eeedb0bf0d3bbdd1990f3d8e6746e73e0f3e52cb62ba2c45e705823b8fdf7cb427a76678d60ec0c8eadaf0230ede7a8dcf5db07f8fc95d7471feed34da419e97
+  languageName: node
+  linkType: hard
+
 "stylelint-config-recommended@npm:^14.0.1":
   version: 14.0.1
   resolution: "stylelint-config-recommended@npm:14.0.1"
@@ -5225,7 +5245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.5.0":
+"stylelint@npm:^16.10.0":
   version: 16.10.0
   resolution: "stylelint@npm:16.10.0"
   dependencies:
