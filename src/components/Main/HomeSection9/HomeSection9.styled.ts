@@ -1,13 +1,21 @@
 import styled from '@emotion/styled';
 
-export const Section8Wrapper = styled.div``;
+export const Section8 = styled.div``;
+
+export const Section8Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;
 
 export const Title = styled.h3`
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
 `;
 
-export const Section8Layout = styled.div``;
+export const Section8Layout = styled.div`
+  display: flex;
+`;
 
 export const Card = styled.div``;
 
