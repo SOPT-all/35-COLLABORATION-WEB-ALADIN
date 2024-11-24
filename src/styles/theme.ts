@@ -233,6 +233,17 @@ const fonts = {
     line-height: 1.8rem;
     letter-spacing: -0.05rem;
   `,
+
+  caption3_r_9: css`
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
+
+    font-size: 0.9rem;
+
+    /* font-weight: 700; */
+    line-height: 0.9rem;
+    letter-spacing: -0.05rem;
+  `,
+
   caption4_sb_16: css`
     font-family: 'AppleSDGothicNeoSB00', sans-serif;
 
