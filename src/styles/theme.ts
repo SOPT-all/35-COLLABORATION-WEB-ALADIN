@@ -42,7 +42,7 @@ const colors = {
 
 const fonts = {
   head_b_24: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 2.4rem;
 
@@ -52,7 +52,7 @@ const fonts = {
   `,
 
   title1_r_18: css`
-    font-family: 'AppleSDGothicNeoR00';
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
 
     font-size: 1.8rem;
 
@@ -61,7 +61,7 @@ const fonts = {
     letter-spacing: -0.1rem;
   `,
   title2_b_17: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.7rem;
 
@@ -70,7 +70,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   title3_b_15: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.5rem;
 
@@ -79,7 +79,7 @@ const fonts = {
     letter-spacing: -0.015rem;
   `,
   title5_r_13: css`
-    font-family: 'AppleSDGothicNeoR00';
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
 
     font-size: 1.3rem;
 
@@ -89,7 +89,7 @@ const fonts = {
   `,
 
   body1_b_15: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.5rem;
 
@@ -98,7 +98,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body1_r_15: css`
-    font-family: 'AppleSDGothicNeoR00';
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
 
     font-size: 1.5rem;
 
@@ -107,7 +107,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body2_b_14: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.4rem;
 
@@ -116,7 +116,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body2_sb_14: css`
-    font-family: 'AppleSDGothicNeoSB00';
+    font-family: 'AppleSDGothicNeoSB00', sans-serif;
 
     font-size: 1.4rem;
 
@@ -125,7 +125,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body5_b_13: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.3rem;
 
@@ -134,7 +134,7 @@ const fonts = {
     letter-spacing: -0.015rem;
   `,
   body5_r_13: css`
-    font-family: 'AppleSDGothicNeoR00';
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
 
     font-size: 1.3rem;
 
@@ -143,7 +143,7 @@ const fonts = {
     letter-spacing: -0.015rem;
   `,
   body7_b_12: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.2rem;
 
@@ -152,7 +152,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body7_sb_12: css`
-    font-family: 'AppleSDGothicNeoSB00';
+    font-family: 'AppleSDGothicNeoSB00', sans-serif;
 
     font-size: 1.2rem;
 
@@ -161,7 +161,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body7_m_12: css`
-    font-family: 'AppleSDGothicNeoM00';
+    font-family: 'AppleSDGothicNeoM00', sans-serif;
 
     font-size: 1.2rem;
 
@@ -170,7 +170,7 @@ const fonts = {
     letter-spacing: 0;
   `,
   body7_r_12: css`
-    font-family: 'AppleSDGothicNeoR00';
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
 
     font-size: 1.2rem;
 
@@ -179,7 +179,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body9_b_11: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.1rem;
 
@@ -188,7 +188,7 @@ const fonts = {
     letter-spacing: -0.05rem;
   `,
   body10_sb_11: css`
-    font-family: 'AppleSDGothicNeoSB00';
+    font-family: 'AppleSDGothicNeoSB00', sans-serif;
 
     font-size: 1.1rem;
 
@@ -197,7 +197,7 @@ const fonts = {
     letter-spacing: 0;
   `,
   body10_r_11: css`
-    font-family: 'AppleSDGothicNeoR00';
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
 
     font-size: 1.1rem;
 
@@ -206,7 +206,7 @@ const fonts = {
     letter-spacing: 0;
   `,
   body11_hvy_17: css`
-    font-family: 'AppleSDGothicNeoH00';
+    font-family: 'AppleSDGothicNeoH00', sans-serif;
 
     font-size: 1.7rem;
 
@@ -215,7 +215,7 @@ const fonts = {
     letter-spacing: 0;
   `,
   body12_sb_13: css`
-    font-family: 'AppleSDGothicNeoSB00';
+    font-family: 'AppleSDGothicNeoSB00', sans-serif;
 
     font-size: 1.3rem;
 
@@ -225,7 +225,7 @@ const fonts = {
   `,
 
   caption2_b_11: css`
-    font-family: 'AppleSDGothicNeoB00';
+    font-family: 'AppleSDGothicNeoB00', sans-serif;
 
     font-size: 1.1rem;
 
@@ -233,8 +233,19 @@ const fonts = {
     line-height: 1.8rem;
     letter-spacing: -0.05rem;
   `,
+
+  caption3_r_9: css`
+    font-family: 'AppleSDGothicNeoR00', sans-serif;
+
+    font-size: 0.9rem;
+
+    /* font-weight: 700; */
+    line-height: 0.9rem;
+    letter-spacing: -0.05rem;
+  `,
+
   caption4_sb_16: css`
-    font-family: 'AppleSDGothicNeoSB00';
+    font-family: 'AppleSDGothicNeoSB00', sans-serif;
 
     font-size: 1.6rem;
 
