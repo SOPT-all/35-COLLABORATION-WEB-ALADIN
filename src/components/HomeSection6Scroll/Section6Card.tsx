@@ -15,7 +15,6 @@ import {
 } from '@assets/svgs';
 
 const Section6Card = () => {
-  //무언가 수정 ~
   const section6Scroll = useRef<HTMLDivElement>(null);
 
   const handleWheel = (e: React.WheelEvent) => {
