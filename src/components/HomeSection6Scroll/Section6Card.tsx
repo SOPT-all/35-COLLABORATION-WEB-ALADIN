@@ -1,17 +1,16 @@
-import { useRef } from 'react';
+import React from 'react';
 import * as S from './Section6Card.styled';
-import {
-  IcRightarrowMediumTextgray40,
-  Img61,
-  Img62,
-  Img63,
-  Img64,
-  Img65,
-  Img66,
-  Img67,
-  Img68,
-  Img69,
-} from '@assets/svgs';
+import SvgImg61 from '@assets/svgs/Img61';
+import SvgImg62 from '@assets/svgs/Img62';
+import SvgImg63 from '@assets/svgs/Img63';
+import SvgImg64 from '@assets/svgs/Img64';
+import SvgImg65 from '@assets/svgs/Img65';
+import SvgImg66 from '@assets/svgs/Img66';
+import SvgImg67 from '@assets/svgs/Img67';
+import SvgImg68 from '@assets/svgs/Img68';
+import SvgImg69 from '@assets/svgs/Img69';
+import IcRightarrowMediumTextgray40 from '@assets/svgs/IcRightarrowMediumTextgray40';
+import { useRef } from 'react';
 
 const Section6Card = () => {
   //무언가 수정 ~
@@ -26,47 +25,47 @@ const Section6Card = () => {
   const cardData = [
     {
       id: 1,
-      img: <Img61 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg61 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '15pt 중고매장 FAQ',
     },
     {
       id: 2,
-      img: <Img62 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg62 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '책모양 오르골',
     },
     {
       id: 3,
-      img: <Img63 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg63 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '북슬리브',
     },
     {
       id: 4,
-      img: <Img64 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg64 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '퀄팅 북슬리브',
     },
     {
       id: 5,
-      img: <Img65 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg65 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '미니 토트백',
     },
     {
       id: 6,
-      img: <Img66 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg66 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '아크릴 스탠드',
     },
     {
       id: 7,
-      img: <Img67 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg67 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '데스크 매트',
     },
     {
       id: 8,
-      img: <Img68 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg68 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '아크릴 램프',
     },
     {
       id: 9,
-      img: <Img69 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
+      img: <SvgImg69 style={{ flexShrink: 0, borderRadius: '1rem' }} />,
       label: '스틸 북엔드',
     },
   ];
