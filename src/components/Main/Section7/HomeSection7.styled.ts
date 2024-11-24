@@ -91,7 +91,7 @@ export const Section7ButtonRight = styled.button`
   display: flex;
   position: absolute;
   top: 24rem;
-  right: 13rem;
+  right: calc(50% - 515px);
   width: 4.2rem;
   height: 4.2rem;
   padding: 1.1rem;
