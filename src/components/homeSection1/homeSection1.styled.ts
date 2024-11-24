@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import theme from "@styles/theme";
+import styled from '@emotion/styled';
+import theme from '@styles/theme';
 
 const commonFlexCenter = `
   display: flex;
@@ -13,7 +13,7 @@ export const HomeSectionWrapper = styled.div`
   width: 100vw;
   height: 55.7rem;
   flex-shrink: 0;
-  background: linear-gradient(180deg, #FFF 0%, #F2F2F4 100%);
+  background: linear-gradient(180deg, #fff 0%, #f2f2f4 100%);
   cursor: default;
 `;
 
@@ -34,7 +34,7 @@ export const TitleMent = styled.div`
 export const Btn = styled.button`
   display: inline-flex;
   position: absolute;
-  right: 14.5rem; 
+  right: 14.5rem;
   height: 2.6rem;
   align-items: center;
   gap: 0.6rem;
@@ -56,7 +56,7 @@ export const ImgContainer = styled.div`
   flex-shrink: 0;
   margin-bottom: 3.6rem;
   padding: 2.4rem 3.8rem 0.9rem 3.7rem;
-  gap:3.5rem;
+  gap: 3.5rem;
 `;
 
 export const ImgBox = styled.div`
@@ -64,17 +64,17 @@ export const ImgBox = styled.div`
   position: relative;
   width: 21rem;
   height: 36rem;
+  gap: 0.7rem;
   flex-direction: column;
   align-items: center;
-  gap:0.7rem;
 `;
 
 export const SalePrice = styled.div`
   display: inline-flex;
   position: absolute;
-  top:-2rem;
-  left: -1.25rem;
+  top: -2rem;
   justify-content: center;
+  left: -1.25rem;
   align-items: center;
   padding: 1.5rem 0.5rem 1.1rem;
   border-radius: 9.9rem;
@@ -99,10 +99,10 @@ export const ImgPrice = styled.div`
   justify-content: flex-start;
 
   color: ${theme.colors.purple50};
-  ${theme.fonts.title3_b_15}; 
   white-space: nowrap;
+  ${theme.fonts.title3_b_15};
 
-  p{
+  p {
     margin-right: 0.4rem;
     margin-left: 3.3rem;
 
@@ -119,8 +119,8 @@ export const RealPrice = styled.div`
 
 export const ArrowIcon = styled.div`
   position: absolute;
-  top:0;
-  left:-0.1rem;
+  top: 0;
+  left: -0.1rem;
 `;
 
 export const ImgWriter = styled.p`
@@ -131,7 +131,7 @@ export const ImgWriter = styled.p`
 export const ProgressLayout = styled.div`
   ${commonFlexCenter}
   width: 100vw;
-  gap:3.8rem;
+  gap: 3.8rem;
 
   background-color: ${theme.colors.white};
 `;
@@ -144,8 +144,8 @@ export const ProgressMent = styled.div`
   color: ${theme.colors.text_gray20};
   ${theme.fonts.body5_b_13};
 
-  p{
-    display:flex;
+  p {
+    display: flex;
     align-items: center;
   }
 `;
@@ -155,7 +155,7 @@ export const ProgressBar = styled.div`
   height: 0.2rem;
   flex-shrink: 0;
   border-radius: 99px;
-  background: var(--purple50, #6358FA);
+  background: var(--purple50, #6358fa);
   transition: width 0.1s linear;
 `;
 
@@ -163,11 +163,11 @@ export const ProgressBox = styled.div`
   ${commonFlexCenter}
   height: 6.2rem;
   flex-shrink: 0;
-  gap:6rem;
+  gap: 6rem;
 
-p {
-  ${commonFlexCenter}
-  width: 10.9rem;
+  p {
+    ${commonFlexCenter}
+    width: 10.9rem;
 
     &:hover {
       color: ${theme.colors.purple50};
