@@ -16,11 +16,8 @@ const colors = {
   white: '#FFFFFF',
   bg_gray10: '#F3F3F5',
   bg_banner_green: '#CAECC9',
-<<<<<<< HEAD
-=======
   bg_gray50: '#EDEFF1',
   bg_gray90: '#2E2E2E',
->>>>>>> develop
 
   stroke_gray10: '#E6E6E6',
   stroke_gray20: '#DCDCDC',
