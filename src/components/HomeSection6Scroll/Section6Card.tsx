@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef } from 'react';
 import * as S from './Section6Card.styled';
 import SvgImg61 from '@assets/svgs/Img61';
 import SvgImg62 from '@assets/svgs/Img62';
@@ -13,7 +14,6 @@ import IcRightarrowMediumTextgray40 from '@assets/svgs/IcRightarrowMediumTextgra
 import { useRef } from 'react';
 
 const Section6Card = () => {
-  //무언가 수정 ~
   const section6Scroll = useRef<HTMLDivElement>(null);
 
   const handleWheel = (e: React.WheelEvent) => {
@@ -75,7 +75,6 @@ const Section6Card = () => {
       <S.Section6CardWrapper>
         <S.Section6TitleLayout>
           <S.Title>알라딘이 만든 사은품</S.Title>
-          <IcRightarrowMediumTextgray40 />
           <IcRightarrowMediumTextgray40 />
         </S.Section6TitleLayout>
         <S.Section6CardLayout ref={section6Scroll} onWheel={handleWheel}>
