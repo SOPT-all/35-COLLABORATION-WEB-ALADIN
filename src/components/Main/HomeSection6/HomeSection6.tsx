@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
-import * as S from './Section6Card.styled';
+import * as S from './HomeSection6.styled';
 import SvgImg61 from '@assets/svgs/Img61';
 import SvgImg62 from '@assets/svgs/Img62';
 import SvgImg63 from '@assets/svgs/Img63';
@@ -12,7 +12,7 @@ import SvgImg68 from '@assets/svgs/Img68';
 import SvgImg69 from '@assets/svgs/Img69';
 import IcRightarrowMediumTextgray40 from '@assets/svgs/IcRightarrowMediumTextgray40';
 
-const Section6Card = () => {
+const HomeSection6 = () => {
   const section6Scroll = useRef<HTMLDivElement>(null);
 
   const handleWheel = (e: React.WheelEvent) => {
@@ -89,4 +89,4 @@ const Section6Card = () => {
   );
 };
 
-export default Section6Card;
+export default HomeSection6;
