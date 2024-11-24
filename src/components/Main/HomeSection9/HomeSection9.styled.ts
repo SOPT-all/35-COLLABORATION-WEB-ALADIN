@@ -1,8 +1,20 @@
 import styled from '@emotion/styled';
 
-export const Section8 = styled.div``;
+export const Section8 = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin: 9.9rem 0 0;
+`;
 
 export const Section8Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;
+
+export const TitleCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -15,12 +27,19 @@ export const Title = styled.h3`
 
 export const Section8Layout = styled.div`
   display: flex;
+  align-items: center;
+  gap: 1.5rem;
 `;
 
-export const Card = styled.div``;
+export const Card = styled.div`
+  display: flex;
+  gap: 1.4rem;
+`;
 
 export const CardLayout = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 0;
 `;
 
 export const CardImg = styled.div`
@@ -28,18 +47,25 @@ export const CardImg = styled.div`
   color: ${({ theme }) => theme.colors.text_gray40};
 `;
 
+export const CardNameInfo = styled.div`
+  padding: 2rem 1.3rem 2.7rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+
+  background-color: ${({ theme }) => theme.colors.bg_gray10};
+`;
+
 export const CardName = styled.div`
+  width: 16.9rem;
+  height: 3.6rem;
+
   ${({ theme }) => theme.fonts.body7_r_12};
   color: ${({ theme }) => theme.colors.text_gray10};
 `;
 
-export const CardInfo = styled.div``;
+export const CardInfo = styled.div`
+  padding: 1.4rem 0 0;
+`;
 
-// display: flex;
-//   width: 19.5rem;
-//   padding: 2rem 1.3rem 2.7rem;
-//   border-radius: 0 0 0.5rem 0.5rem;
-//   flex-direction: column;
-
-//   background-color: ${({ theme }) => theme.colors.bg_gray10};
-// `;
+export const IndicatorBox = styled.div`
+  align-items: center;
+`;

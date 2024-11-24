@@ -20,12 +20,13 @@ const router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: '/',
-        element: <HomeSection8 />,
-      },
-      {
-        path: '/',
-        element: <HomeSection9 />,
+        path: '/test',
+        element: (
+          <>
+            <HomeSection8 />
+            <HomeSection9 />
+          </>
+        ),
       },
     ],
     errorElement: <Navigate to={'/'} />,

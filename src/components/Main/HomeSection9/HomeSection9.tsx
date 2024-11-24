@@ -45,23 +45,27 @@ const HomeSection9 = () => {
   return (
     <>
       <S.Section8>
-        <S.Title>TO BE CONTINUED...추천 노트</S.Title>
         <S.Section8Wrapper>
           <S.Section8Layout>
             <ArrowLeftButton />
-            <S.Card>
-              {cardData.map((card, id) => (
-                <S.CardLayout key={id}>
-                  <S.CardImg>{card.img}</S.CardImg>
-                  <S.CardName>{card.name}</S.CardName>
-                  <S.CardInfo>{card.info}</S.CardInfo>
-                </S.CardLayout>
-              ))}
-            </S.Card>
+            <S.TitleCard>
+              <S.Title>TO BE CONTINUED...추천 노트</S.Title>
+              <S.Card>
+                {cardData.map((card, id) => (
+                  <S.CardLayout key={id}>
+                    <S.CardImg>{card.img}</S.CardImg>
+                    <S.CardNameInfo>
+                      <S.CardName>{card.name}</S.CardName>
+                      <S.CardInfo>{card.info}</S.CardInfo>
+                    </S.CardNameInfo>
+                  </S.CardLayout>
+                ))}
+              </S.Card>
+            </S.TitleCard>
             <ArrowRightButton />
           </S.Section8Layout>
-          <SvgHomeSection2Indicator />
         </S.Section8Wrapper>
+        <SvgHomeSection2Indicator />
       </S.Section8>
     </>
   );
