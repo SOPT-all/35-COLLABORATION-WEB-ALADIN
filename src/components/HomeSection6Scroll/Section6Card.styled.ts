@@ -43,13 +43,13 @@ export const CardLabel = styled.p`
   width: 100%;
   height: 3.8rem;
   padding: 1rem 1.2rem;
-
-  ${({ theme }) => theme.fonts.body1_b_15};
-  background-color: ${({ theme }) => theme.colors.tp_white50};
-
-  color: ${({ theme }) => theme.colors.text_gray40};
   align-items: center;
 
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+
+  background-color: ${({ theme }) => theme.colors.tp_white50};
+
+  color: ${({ theme }) => theme.colors.text_gray40};
+  ${({ theme }) => theme.fonts.body1_b_15};
 `;
