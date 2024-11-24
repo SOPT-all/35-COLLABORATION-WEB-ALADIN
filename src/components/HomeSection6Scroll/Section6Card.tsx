@@ -11,7 +11,6 @@ import SvgImg67 from '@assets/svgs/Img67';
 import SvgImg68 from '@assets/svgs/Img68';
 import SvgImg69 from '@assets/svgs/Img69';
 import IcRightarrowMediumTextgray40 from '@assets/svgs/IcRightarrowMediumTextgray40';
-import { useRef } from 'react';
 
 const Section6Card = () => {
   const section6Scroll = useRef<HTMLDivElement>(null);
