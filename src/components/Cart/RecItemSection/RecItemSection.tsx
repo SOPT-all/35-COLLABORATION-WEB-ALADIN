@@ -25,7 +25,7 @@ const RecItemSection = () => {
               <S.RecItem>
                 <book.image className="img-cartbook" />
                 <div>
-                  <S.LikeBtn
+                  <S.HoverBtn
                     onMouseEnter={() => setHeartHovered(book.id)}
                     onMouseLeave={() => setHeartHovered(null)}
                   >
@@ -34,8 +34,8 @@ const RecItemSection = () => {
                     ) : (
                       <IcHeartGray />
                     )}
-                  </S.LikeBtn>
-                  <S.CartBtn
+                  </S.HoverBtn>
+                  <S.HoverBtn
                     onMouseEnter={() => setCartHovered(book.id)}
                     onMouseLeave={() => setCartHovered(null)}
                   >
@@ -44,7 +44,7 @@ const RecItemSection = () => {
                     ) : (
                       <IcCartGray />
                     )}
-                  </S.CartBtn>
+                  </S.HoverBtn>
                 </div>
               </S.RecItem>
               <p>{book.title}</p>

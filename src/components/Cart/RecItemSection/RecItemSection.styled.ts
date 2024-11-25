@@ -48,7 +48,7 @@ export const RecItem = styled.div`
     display: none;
     position: absolute;
     z-index: 10;
-    bottom: 1.3rem;
+    bottom: 1.4rem;
     left: 50%;
     transform: translateX(-50%);
     gap: 2.5rem;
@@ -63,7 +63,7 @@ export const RecItem = styled.div`
   }
 `;
 
-export const LikeBtn = styled.button`
+export const HoverBtn = styled.button`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 50%;
   display: flex;
@@ -72,27 +72,8 @@ export const LikeBtn = styled.button`
   width: 4.8rem;
   height: 4.8rem;
   z-index: 10;
-  filter: brightness(1);
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.purple50};
   }
 `;
-
-export const CartBtn = styled.button`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4.8rem;
-  height: 4.8rem;
-  z-index: 10;
-  filter: brightness(1);
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.purple50};
-  }
-`;
-
-export const ArrowBtn = styled.button``;
