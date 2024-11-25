@@ -1,20 +1,20 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgIcCheckbox = (props: SVGProps<SVGSVGElement>) => (
+const SvgIcLeftarrowGray50 = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
+    width={20}
+    height={20}
     fill="none"
     {...props}
   >
     <path
-      stroke="#fff"
+      stroke="gray"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
-      d="m3 8 3.5 3.5L13 5"
+      strokeWidth={1.5}
+      d="m12 4-6 6 6 6"
     />
   </svg>
 );
-export default SvgIcCheckbox;
+export default SvgIcLeftarrowGray50;

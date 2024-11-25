@@ -7,6 +7,7 @@ import PriceInfo from '@components/Cart/PriceInfo/PriceInfo';
 import ShippingInfo from '@components/Cart/ShippingInfo/ShippingInfo';
 import * as S from './Cart.styled';
 import OrderBtn from '@components/Cart/OrderBtn/OrderBtn';
+import RecItemSection from '@components/Cart/RecItemSection/RecItemSection';
 
 // dummy data
 const cartItems = [
@@ -126,6 +127,7 @@ const Cart = () => {
           />
         </S.DeliveryBox>
       </S.CartContainer>
+      <RecItemSection />
     </S.CartWrapper>
   );
 };
