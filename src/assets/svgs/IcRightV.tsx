@@ -1,14 +1,14 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgIcAdd = (props: SVGProps<SVGSVGElement>) => (
+const SvgIcRightV = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={10}
-    height={10}
+    width={5}
+    height={8}
     fill="none"
     {...props}
   >
-    <path stroke="#333" d="M2 5h6M5 2v6" />
+    <path stroke="#444" d="m1 7 3-3-3-3" />
   </svg>
 );
-export default SvgIcAdd;
+export default SvgIcRightV;
