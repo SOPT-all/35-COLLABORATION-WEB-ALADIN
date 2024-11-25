@@ -2,6 +2,10 @@ import { IcLocation, IcRightV } from '@assets/svgs';
 import * as S from './Footer.styled';
 
 const Footer = () => {
+  const handleClickBtn = () => {
+    alert('이스터에그 발견!');
+  };
+
   return (
     <S.Wrapper>
       <S.FooterWrapper>
@@ -57,10 +61,10 @@ const Footer = () => {
               서울시 마포구 백범로 71 숨도빌딩 7층 Fax 02-6926-2600
             </S.RightContent>
             <S.BtnWrapper>
-              <S.Btn>1:1 문의</S.Btn>
-              <S.Btn>FAQ</S.Btn>
+              <S.Btn onClick={handleClickBtn}>1:1 문의</S.Btn>
+              <S.Btn onClick={handleClickBtn}>FAQ</S.Btn>
             </S.BtnWrapper>
-            <S.LongBtn>
+            <S.LongBtn onClick={handleClickBtn}>
               <IcLocation />
               중고매장 위치, 영업시간 안내
             </S.LongBtn>
