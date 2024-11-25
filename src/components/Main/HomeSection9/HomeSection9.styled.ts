@@ -20,7 +20,7 @@ export const TitleCard = styled.div`
   gap: 1.6rem;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.p`
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
 `;
