@@ -17,7 +17,7 @@ const HomeSection7 = () => {
     { id: 5, img: <SvgImg75 />, label: '5', name: '영원한 천국' },
   ];
   return (
-    <>
+    <S.HomeSection7>
       <S.Section7>
         <S.Section7ButtonLeft>{'<'}</S.Section7ButtonLeft>
         <S.Section7Wrapper>
@@ -48,7 +48,7 @@ const HomeSection7 = () => {
         </S.Section7Wrapper>
         <S.Section7ButtonRight>{'>'}</S.Section7ButtonRight>
       </S.Section7>
-    </>
+    </S.HomeSection7>
   );
 };
 

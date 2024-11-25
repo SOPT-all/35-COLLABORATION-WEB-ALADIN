@@ -1,7 +1,16 @@
 import styled from '@emotion/styled';
 
+export const HomeSection7 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Section7 = styled.div`
+  display: flex;
   position: relative;
+  align-items: center;
+  gap: 1.4rem;
   padding: 4.9rem 15.4rem;
 
   background-color: ${({ theme }) => theme.colors.purple10};
@@ -67,9 +76,6 @@ export const Section7BookLayout = styled.div`
 
 export const Section7ButtonLeft = styled.button`
   display: flex;
-  position: absolute;
-  top: 24rem;
-  left: 10rem;
   width: 4.2rem;
   height: 4.2rem;
   padding: 1.1rem;
@@ -89,9 +95,6 @@ export const Section7ButtonLeft = styled.button`
 
 export const Section7ButtonRight = styled.button`
   display: flex;
-  position: absolute;
-  top: 24rem;
-  right: calc(50% - 515px);
   width: 4.2rem;
   height: 4.2rem;
   padding: 1.1rem;

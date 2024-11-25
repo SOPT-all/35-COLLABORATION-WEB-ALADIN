@@ -5,7 +5,7 @@ export const Section8 = styled.div`
   flex-direction: column;
   gap: 3rem;
   align-items: center;
-  margin: 9.9rem 0 0;
+  padding: 0 0 6.9rem;
 `;
 
 export const Section8Wrapper = styled.div`
@@ -58,12 +58,15 @@ export const CardName = styled.div`
   width: 16.9rem;
   height: 3.6rem;
 
-  ${({ theme }) => theme.fonts.body7_r_12};
-  color: ${({ theme }) => theme.colors.text_gray10};
+  ${({ theme }) => theme.fonts.title3_b_15};
+  color: ${({ theme }) => theme.colors.text_gray40};
 `;
 
 export const CardInfo = styled.div`
   padding: 1.4rem 0 0;
+
+  ${({ theme }) => theme.fonts.body7_m_12};
+  color: ${({ theme }) => theme.colors.text_gray10};
 `;
 
 export const IndicatorBox = styled.div`

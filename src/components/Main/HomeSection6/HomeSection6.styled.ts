@@ -1,10 +1,18 @@
 import styled from '@emotion/styled';
 
+export const Section6 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Section6CardWrapper = styled.div`
   display: flex;
+  width: 102rem;
+  padding: 7rem 0 10.5rem 2rem;
+  max-width: 120rem;
   flex-direction: column;
   gap: 3.5rem;
-  padding: 7rem 0 10.5rem 16.8rem;
 `;
 
 export const Section6TitleLayout = styled.div`

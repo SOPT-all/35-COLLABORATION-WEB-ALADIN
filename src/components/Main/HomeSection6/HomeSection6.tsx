@@ -70,7 +70,7 @@ const HomeSection6 = () => {
   ];
 
   return (
-    <>
+    <S.Section6>
       <S.Section6CardWrapper>
         <S.Section6TitleLayout>
           <S.Title>알라딘이 만든 사은품</S.Title>
@@ -85,7 +85,7 @@ const HomeSection6 = () => {
           ))}
         </S.Section6CardLayout>
       </S.Section6CardWrapper>
-    </>
+    </S.Section6>
   );
 };
 
