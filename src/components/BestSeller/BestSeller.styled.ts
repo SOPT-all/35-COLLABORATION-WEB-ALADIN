@@ -29,8 +29,8 @@ export const BestSellerTitle = styled.div`
   height: 3.2rem;
 
   color: ${({ theme }) => theme.colors.text_gray40};
-  ${({ theme }) => theme.fonts.head_b_24};
 
+  ${({ theme }) => theme.fonts.head_b_24};
   p {
     height: 3.2rem;
     margin-right: 0.8rem;
@@ -87,8 +87,8 @@ export const TopBox = styled.section`
   flex-direction: column;
 
   color: ${({ theme }) => theme.colors.text_gray40};
-  ${({ theme }) => theme.fonts.title3_b_15};
 
+  ${({ theme }) => theme.fonts.title3_b_15};
   section {
     display: flex;
     align-items: center;
