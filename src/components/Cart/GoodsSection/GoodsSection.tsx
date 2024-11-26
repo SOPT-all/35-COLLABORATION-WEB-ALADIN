@@ -12,9 +12,7 @@ const GoodsSection = () => {
       <S.GoodsInfoContainer>
         <S.TitleBox>
           <S.Title>
-            <h1>
-              <span>알라딘</span> <span className="purple">굿즈</span>
-            </h1>
+            <span>알라딘</span> <span className="purple">굿즈</span>
           </S.Title>
           <S.ButtonBox>
             <S.PrevBtn>
@@ -37,9 +35,7 @@ const GoodsSection = () => {
       <S.GoodsInfoContainer>
         <S.TitleBox>
           <S.Title>
-            <h1>
-              <span>알라딘</span> <span className="purple">굿즈</span>
-            </h1>
+            <span>알라딘</span> <span className="purple">굿즈</span>
           </S.Title>
           <S.ButtonBox>
             <S.PrevBtn>

@@ -52,10 +52,8 @@ export const Title = styled.div`
   color: ${({ theme }) => theme.colors.text_gray40};
   ${({ theme }) => theme.fonts.title2_b_17};
 
-  h1 {
-    .purple {
-      color: ${({ theme }) => theme.colors.purple50};
-    }
+  .purple {
+    color: ${({ theme }) => theme.colors.purple50};
   }
 `;
 
