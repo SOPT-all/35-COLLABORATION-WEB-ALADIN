@@ -38,23 +38,26 @@ export const GOODS_INFO: Goods[] = [
     image: ImgCart34,
     name: '본투리드 초저점도 3색 볼펜 0.7mm',
   },
+];
+
+export const X2_GOODS_INFO: Goods[] = [
   {
-    id: 5,
+    id: 1,
     image: ImgCart35,
     name: '콜드브루 디카페인 날개',
   },
   {
-    id: 6,
+    id: 2,
     image: ImgCart36,
     name: '드립백 에티오피아 예가체프 하루수케',
   },
   {
-    id: 7,
+    id: 3,
     image: ImgCart37,
     name: '진드립백 가을하다',
   },
   {
-    id: 8,
+    id: 4,
     image: ImgCart38,
     name: '캡슐 파우스트',
   },

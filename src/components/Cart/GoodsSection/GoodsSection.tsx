@@ -4,7 +4,7 @@ import {
   ImgShopx2,
 } from '@assets/svgs';
 import * as S from './Goods.styled';
-import { GOODS_INFO } from '@constants/GoodsInfoConstants';
+import { GOODS_INFO, X2_GOODS_INFO } from '@constants/GoodsInfoConstants';
 
 const GoodsSection = () => {
   return (
@@ -26,7 +26,7 @@ const GoodsSection = () => {
           </S.ButtonBox>
         </S.TitleBox>
         <S.GoodsList>
-          {GOODS_INFO.slice(0, 4).map((goods) => (
+          {GOODS_INFO.map((goods) => (
             <S.GoodsInfo key={goods.id}>
               <goods.image className="img-goods" />
               <p>{goods.name}</p>
@@ -51,7 +51,7 @@ const GoodsSection = () => {
           </S.ButtonBox>
         </S.TitleBox>
         <S.GoodsList>
-          {GOODS_INFO.slice(4, 8).map((goods) => (
+          {X2_GOODS_INFO.map((goods) => (
             <S.GoodsInfo key={goods.id}>
               <S.Img>
                 <ImgShopx2 className="shop-icon" />
