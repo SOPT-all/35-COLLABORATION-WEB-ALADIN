@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './Header.styled';
 import {
   AladinLogo,
@@ -11,11 +11,52 @@ import {
 } from '@assets/svgs';
 import { SerachUnder } from '@assets/svgs';
 import { useNavigate } from 'react-router-dom';
-import { HEADER_MENU } from '@constants/headerMenuConstant';
+import { instance } from '@apis/apis';
+
+type Categories = {
+  domesticBooks: string[];
+  foreignBooks: string[];
+  eBooks: string[];
+  onlineCourses: string[];
+  music: string[];
+  blueRay: string[];
+  aladinGoods: string[];
+};
+
+type ResponseData = {
+  data: {
+    categories: Categories;
+    boldCategories: string[];
+  };
+};
+
+type ApiResponse = {
+  code: number;
+  message: string;
+  data: ResponseData;
+};
 
 const Header = () => {
   const navigate = useNavigate();
   const [isShow, setIsShow] = useState(false);
+  const [headerMenuCategories, setHeaderMenuCategories] =
+    useState<Categories>();
+  const [boldCategories, setBoldCategories] = useState<Set<string>>(
+    new Set(...[]),
+  );
+
+  useEffect(() => {
+    const fetchHeaderData = async () => {
+      try {
+        const response: ApiResponse = await instance.get('/api/v1/categories');
+        setHeaderMenuCategories(response.data.data.categories);
+        setBoldCategories(new Set(response.data.data.boldCategories));
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchHeaderData();
+  }, []);
 
   return (
     <S.HeaderWrapper>
@@ -125,8 +166,13 @@ const Header = () => {
               <S.DropDownCategoryBox>
                 <S.DroptDownCategoryHeader>국내도서</S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.domesticBooks.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.domesticBooks.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-1`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
@@ -135,8 +181,13 @@ const Header = () => {
                   알라딘 굿즈
                 </S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.aladinGoods.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.aladinGoods.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-2`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
@@ -146,8 +197,13 @@ const Header = () => {
               <S.DropDownCategoryBox>
                 <S.DroptDownCategoryHeader>외국도서</S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.foreignBooks.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.foreignBooks.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-3`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
@@ -157,8 +213,13 @@ const Header = () => {
               <S.DropDownCategoryBox>
                 <S.DroptDownCategoryHeader>eBook</S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.eBooks.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.eBooks.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-4`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
@@ -170,8 +231,13 @@ const Header = () => {
                   온라인중고
                 </S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.onlineCourses.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.onlineCourses.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-5`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
@@ -181,16 +247,26 @@ const Header = () => {
               <S.DropDownCategoryBox>
                 <S.DroptDownCategoryHeader>음반</S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.music.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.music.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-6`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
               <S.DropDownCategoryBox>
                 <S.DroptDownCategoryHeader>블루레이</S.DroptDownCategoryHeader>
                 <S.DropDownCategoryBody>
-                  {HEADER_MENU.categories.bluRay.map((cate) => (
-                    <S.OneCategory $isBold={false}>{cate}</S.OneCategory>
+                  {headerMenuCategories?.blueRay.map((cate, idx) => (
+                    <S.OneCategory
+                      key={`${cate}-${idx}-7`}
+                      $isBold={boldCategories.has(cate)}
+                    >
+                      {cate}
+                    </S.OneCategory>
                   ))}
                 </S.DropDownCategoryBody>
               </S.DropDownCategoryBox>
