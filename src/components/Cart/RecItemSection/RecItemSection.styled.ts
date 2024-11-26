@@ -2,12 +2,13 @@ import styled from '@emotion/styled';
 
 export const RecItemSectionWrapper = styled.section`
   display: flex;
-  gap: 2rem;
   width: 100vw;
+  padding: 4rem 0;
+
   background-color: ${({ theme }) => theme.colors.purple10};
+  gap: 2rem;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
 `;
 
 export const RecItemContainer = styled.div`
@@ -26,8 +27,8 @@ export const RecItemCard = styled.div`
   p {
     ${({ theme }) => theme.fonts.body5_r_13};
     color: ${({ theme }) => theme.colors.text_gray40};
-    white-space: pre-line;
     text-align: center;
+    white-space: pre-line;
   }
 
   display: flex;
@@ -47,9 +48,9 @@ export const RecItem = styled.div`
   div {
     display: none;
     position: absolute;
-    z-index: 10;
     bottom: 1.4rem;
     left: 50%;
+    z-index: 10;
     transform: translateX(-50%);
     gap: 2.5rem;
   }
@@ -64,14 +65,15 @@ export const RecItem = styled.div`
 `;
 
 export const HoverBtn = styled.button`
-  background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 10;
   width: 4.8rem;
   height: 4.8rem;
-  z-index: 10;
+
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.purple50};
