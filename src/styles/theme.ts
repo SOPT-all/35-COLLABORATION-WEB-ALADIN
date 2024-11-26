@@ -16,8 +16,8 @@ const colors = {
   white: '#FFFFFF',
   bg_gray10: '#F3F3F5',
   bg_banner_green: '#CAECC9',
-  bg_gray50: '#EDEF1',
-  bg_gray90: '2E2E2E',
+  bg_gray50: '#EDEFF1',
+  bg_gray90: '#2E2E2E',
 
   stroke_gray10: '#E6E6E6',
   stroke_gray20: '#DCDCDC',
