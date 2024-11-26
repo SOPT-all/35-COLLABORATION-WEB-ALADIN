@@ -51,10 +51,12 @@ const GoodsSection = () => {
           </S.ButtonBox>
         </S.TitleBox>
         <S.GoodsList>
-          {X2_GOODS_INFO.map((goods) => (
+          {X2_GOODS_INFO.map((goods, index) => (
             <S.GoodsInfo key={goods.id}>
               <S.Img>
-                <ImgShopx2 className="shop-icon" />
+                {index !== X2_GOODS_INFO.length - 1 && (
+                  <ImgShopx2 className="shop-icon" />
+                )}
                 <goods.image className="img-goods" />
               </S.Img>
               <p>{goods.name}</p>
