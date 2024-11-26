@@ -5,6 +5,7 @@ export { default as Hihi } from './Hihi';
 export { default as HomeSection2Indicator } from './HomeSection2Indicator';
 export { default as IcAdd } from './IcAdd';
 export { default as IcArrowSaleBefore } from './IcArrowSaleBefore';
+export { default as IcAudio } from './IcAudio';
 export { default as IcCheckbox } from './IcCheckbox';
 export { default as IcChevronSmallRight } from './IcChevronSmallRight';
 export { default as IcLocation } from './IcLocation';

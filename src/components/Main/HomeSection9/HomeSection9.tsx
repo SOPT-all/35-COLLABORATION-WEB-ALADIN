@@ -1,5 +1,4 @@
 import * as S from './HomeSection9.styled';
-import React from 'react';
 import ArrowLeftButton from '@components/common/Button/ArrowLeftButton/ArrowLeftButton';
 import ArrowRightButton from '@components/common/Button/ArrowRightButton/ArrowRightButton';
 import SvgImg91 from '@assets/svgs/Img91';

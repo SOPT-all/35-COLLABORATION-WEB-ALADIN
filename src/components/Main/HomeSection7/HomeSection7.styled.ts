@@ -1,26 +1,13 @@
 import styled from '@emotion/styled';
 
-export const HomeSection7 = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Section7 = styled.div`
-  display: flex;
-  position: relative;
-  align-items: center;
-  gap: 1.4rem;
-  padding: 4.9rem 15.4rem;
-
-  background-color: ${({ theme }) => theme.colors.purple10};
-`;
-
 export const Section7Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.7rem;
+  padding: 4.9rem 15.4rem;
+
+  background-color: ${({ theme }) => theme.colors.purple10};
 `;
 
 export const Section7Layout = styled.div`
@@ -48,11 +35,6 @@ export const Title = styled.p`
   color: ${({ theme }) => theme.colors.text_gray40};
 `;
 
-export const TitleButton = styled.button`
-  color: ${({ theme }) => theme.colors.text_gray40};
-  font-size: 2rem;
-`;
-
 export const LabelName = styled.p`
   ${({ theme }) => theme.fonts.caption4_sb_16};
   color: ${({ theme }) => theme.colors.purple50};
@@ -71,66 +53,33 @@ export const Section7LabelContainer = styled.div`
 export const Section7BookLayout = styled.div`
   display: flex;
   align-items: center;
-  gap: 2.25rem;
+  gap: 4.2rem;
+  position: relative;
 `;
 
-export const Section7ButtonLeft = styled.button`
+export const BtnLayout = styled.div`
   display: flex;
-  width: 4.2rem;
-  height: 4.2rem;
-  padding: 1.1rem;
-
-  background-color: ${({ theme }) => theme.colors.bg_gray10};
-
-  color: ${({ theme }) => theme.colors.stroke_gray60};
-  font-size: 2rem;
-  justify-content: center;
   align-items: center;
-  border-radius: 50%;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.stroke_gray20};
-  }
-`;
-
-export const Section7ButtonRight = styled.button`
-  display: flex;
-  width: 4.2rem;
-  height: 4.2rem;
-  padding: 1.1rem;
-
-  background-color: ${({ theme }) => theme.colors.bg_gray10};
-
-  color: ${({ theme }) => theme.colors.stroke_gray60};
-  font-size: 2rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.stroke_gray20};
-  }
+  gap: 1.4rem;
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: relative;
+  gap: 2rem;
+  padding: 2rem 0;
 `;
 
-export const CardBox = styled.div`
+export const CardLabelAll = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-right: 4.2rem;
-  padding: 2rem 0;
+  gap: 17rem;
+  position: absolute;
+  bottom: 4.3rem;
+  left: 15.3rem;
 `;
 
 export const CardLabel = styled.div`
   display: flex;
-  position: absolute;
-  right: 2.2rem;
-  bottom: 4rem;
   width: 4.4rem;
   height: 4.4rem;
   justify-content: center;
