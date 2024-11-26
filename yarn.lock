@@ -5309,7 +5309,6 @@ __metadata:
   linkType: hard
 
 "stylelint@npm:^16.10.0":
-"stylelint@npm:^16.10.0":
   version: 16.10.0
   resolution: "stylelint@npm:16.10.0"
   dependencies:
