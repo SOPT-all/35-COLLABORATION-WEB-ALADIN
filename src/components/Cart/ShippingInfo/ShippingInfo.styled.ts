@@ -12,7 +12,9 @@ export const ShippingInfoBox = styled.div`
   gap: 2rem;
 `;
 
-export const FreeShippingSuccess = styled.span`
+export const ShippingComment = styled.span`
+  width: 18.3rem;
+
   color: ${theme.colors.text_gray40};
   ${theme.fonts.title3_b_15};
 `;

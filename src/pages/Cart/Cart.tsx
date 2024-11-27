@@ -83,7 +83,7 @@ const Cart = () => {
       <S.CartSection>
         <S.CartWrapper>
           <h1>장바구니</h1>
-          <ShippingInfo />
+          <ShippingInfo totalPrice={selectedTotalDiscountedPrice} />
           <S.CartContainer>
             <S.ItemBox>
               <CartListHeader
