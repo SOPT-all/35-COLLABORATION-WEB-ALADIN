@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const RecItemSectionWrapper = styled.section`
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding: 4rem 0;
 
   background-color: ${({ theme }) => theme.colors.purple10};

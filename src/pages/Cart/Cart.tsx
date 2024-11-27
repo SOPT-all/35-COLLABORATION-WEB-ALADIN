@@ -9,6 +9,7 @@ import ShippingInfo from '@components/Cart/ShippingInfo/ShippingInfo';
 import * as S from './Cart.styled';
 import OrderBtn from '@components/Cart/OrderBtn/OrderBtn';
 import GoodsSection from '@components/Cart/GoodsSection/GoodsSection';
+import RecItemSection from '@components/Cart/RecItemSection/RecItemSection';
 
 interface CartItemType {
   id: number;
@@ -78,57 +79,64 @@ const Cart = () => {
   const selectedQty = selectedCartItems.length;
 
   return (
-    <S.CartWrapper>
-      <h1>장바구니</h1>
-      <ShippingInfo />
-      <S.CartContainer>
-        <S.ItemBox>
-          <CartListHeader
-            totalQty={totalQty}
-            aladinDeliveryQty={totalQty}
-            onSelectAll={handleSelectAll}
-            isAllSelected={isAllSelected}
-            selectedItems={selectedItems}
-          />
-          <div>
-            <CartItemHeader
-              checked={isAllSelected}
-              onChange={handleSelectAll}
-            />
-            {cartItems.map((item) => (
-              <CartItem
-                key={item.id}
-                id={item.id}
-                name={item.name}
-                discountRate={item.discountRate}
-                price={item.price}
-                discountedPrice={item.discountedPrice}
-                imageUrl={item.imageUrl}
-                selected={selectedItems.has(item.id)}
-                onSelectItem={handleSelectItem}
+    <>
+      <S.CartSection>
+        <S.CartWrapper>
+          <h1>장바구니</h1>
+          <ShippingInfo />
+          <S.CartContainer>
+            <S.ItemBox>
+              <CartListHeader
+                totalQty={totalQty}
+                aladinDeliveryQty={totalQty}
+                onSelectAll={handleSelectAll}
+                isAllSelected={isAllSelected}
+                selectedItems={selectedItems}
               />
-            ))}
-          </div>
-          <S.PriceBox>
-            {selectedTotalPrice.toLocaleString()}원 ({selectedQty}) + 배송비
-            무료
-          </S.PriceBox>
-        </S.ItemBox>
-        <S.DeliveryBox>
-          <AddressInfo />
-          <PriceInfo
-            productPrice={selectedTotalPrice}
-            discountPrice={selectedTotalPrice - selectedTotalDiscountedPrice}
-            totalPrice={selectedTotalDiscountedPrice}
-          />
-          <OrderBtn
-            totalItems={selectedQty}
-            totalPrice={selectedTotalDiscountedPrice}
-          />
-        </S.DeliveryBox>
-      </S.CartContainer>
+              <div>
+                <CartItemHeader
+                  checked={isAllSelected}
+                  onChange={handleSelectAll}
+                />
+                {cartItems.map((item) => (
+                  <CartItem
+                    key={item.id}
+                    id={item.id}
+                    name={item.name}
+                    discountRate={item.discountRate}
+                    price={item.price}
+                    discountedPrice={item.discountedPrice}
+                    imageUrl={item.imageUrl}
+                    selected={selectedItems.has(item.id)}
+                    onSelectItem={handleSelectItem}
+                  />
+                ))}
+              </div>
+              <S.PriceBox>
+                {selectedTotalPrice.toLocaleString()}원 ({selectedQty}) + 배송비
+                무료
+              </S.PriceBox>
+            </S.ItemBox>
+            <S.DeliveryBox>
+              <AddressInfo />
+              <PriceInfo
+                productPrice={selectedTotalPrice}
+                discountPrice={
+                  selectedTotalPrice - selectedTotalDiscountedPrice
+                }
+                totalPrice={selectedTotalDiscountedPrice}
+              />
+              <OrderBtn
+                totalItems={selectedQty}
+                totalPrice={selectedTotalDiscountedPrice}
+              />
+            </S.DeliveryBox>
+          </S.CartContainer>
+        </S.CartWrapper>
+      </S.CartSection>
+      <RecItemSection />
       <GoodsSection />
-    </S.CartWrapper>
+    </>
   );
 };
 
