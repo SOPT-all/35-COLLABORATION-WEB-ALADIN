@@ -81,5 +81,3 @@ const HomeSection10 = () => {
 };
 
 export default HomeSection10;
-
-//17.025

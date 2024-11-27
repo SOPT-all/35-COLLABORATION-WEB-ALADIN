@@ -8,8 +8,8 @@ export const Section6 = styled.div`
 
 export const Section6CardWrapper = styled.div`
   display: flex;
-  width: 102rem;
-  padding: 7rem 0 10.5rem 2rem;
+  width: 103rem;
+  padding: 7rem 0 10.5rem;
   max-width: 120rem;
   flex-direction: column;
   gap: 3.5rem;

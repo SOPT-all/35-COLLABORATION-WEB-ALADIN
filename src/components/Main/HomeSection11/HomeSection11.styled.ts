@@ -8,6 +8,7 @@ export const Section11Main = styled.div`
 
 export const Section11 = styled.div`
   display: flex;
+  width: 103rem;
   gap: 4.5rem;
 `;
 
@@ -60,7 +61,6 @@ export const CardName = styled.div`
 
   ${({ theme }) => theme.fonts.body2_b_14};
   color: ${({ theme }) => theme.colors.text_gray40};
-  white-space: normal;
 `;
 export const CardTag = styled.div`
   ${({ theme }) => theme.fonts.body7_sb_12};
@@ -100,8 +100,14 @@ export const TalkFooter = styled.div`
   flex-direction: column;
   gap: 0.6rem;
   padding: 2rem 0;
+  border-bottom: 0.1rem solid ${({ theme }) => theme.colors.stroke_gray30};
 `;
 export const TalkTitle = styled.div`
+  overflow: hidden;
+
+  width: 25rem;
+  word-wrap: break-word;
+
   ${({ theme }) => theme.fonts.body2_b_14};
   color: ${({ theme }) => theme.colors.text_gray30};
 `;
