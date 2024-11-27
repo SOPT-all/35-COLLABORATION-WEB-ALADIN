@@ -1,10 +1,18 @@
 import styled from '@emotion/styled';
 
+export const Section6 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Section6CardWrapper = styled.div`
   display: flex;
+  width: 103rem;
+  padding: 7rem 0 10.5rem;
+  max-width: 120rem;
   flex-direction: column;
   gap: 3.5rem;
-  padding: 7rem 0 10.5rem 16.8rem;
 `;
 
 export const Section6TitleLayout = styled.div`
@@ -13,7 +21,7 @@ export const Section6TitleLayout = styled.div`
   gap: 0.8rem;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.p`
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
 `;
@@ -24,10 +32,6 @@ export const Section6CardLayout = styled.div`
   gap: 1.1rem;
   overflow-x: scroll;
   scrollbar-width: none;
-
-  & > div:last-child {
-    padding-right: 16.8rem;
-  }
 `;
 
 export const Section6CardContainer = styled.div`
@@ -38,12 +42,13 @@ export const Section6CardContainer = styled.div`
 
 export const CardLabel = styled.p`
   display: flex;
-  align-items: center;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 33.6rem;
   height: 3.8rem;
   padding: 1rem 1.2rem;
+  align-items: center;
+
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 
