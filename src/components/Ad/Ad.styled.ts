@@ -5,7 +5,7 @@ export const AdWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   flex-shrink: 0;
   cursor: default;
   align-self: stretch;
