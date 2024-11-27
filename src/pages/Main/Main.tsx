@@ -9,11 +9,13 @@ import HomeSection9 from '@components/Main/HomeSection9/HomeSection9';
 import HomeSection11 from '@components/Main/HomeSection11/HomeSection11';
 import BestSeller from '@components/BestSeller/BestSeller';
 import Ad from '@components/Ad/Ad';
+import HomeSection2 from '@components/HomeSection2/HomeSection2';
 
 const Main = () => {
   return (
     <S.MainWrapper>
       <HomeSection1 />
+      <HomeSection2 />
       <BestSeller />
       <Ad />
       <HomeSection6 />
