@@ -15,7 +15,7 @@ const ShippingInfo = ({ totalPrice }: ShippingInfoProps) => {
         <S.ShippingComment>무료 배송 금액을 충족하셨어요!</S.ShippingComment>
       ) : (
         <S.ShippingComment>
-          무료 배송까지 {15000 - totalPrice}원!
+          무료 배송까지 {(15000 - totalPrice).toLocaleString()}원!
         </S.ShippingComment>
       )}
       <S.DeleveryBar percentage={percentage} />
