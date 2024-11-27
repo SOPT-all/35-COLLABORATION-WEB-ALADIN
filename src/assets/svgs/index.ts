@@ -79,4 +79,15 @@ export { default as ImgShopx2 } from './ImgShopx2';
 export { default as Playno } from './Playno';
 export { default as Playyes } from './Playyes';
 export { default as SerachUnder } from './SerachUnder';
+
+export { default as Img31 } from './Img31';
+export { default as Img32 } from './Img32';
+
+export { default as ImgAd2 } from './ImgAd2';
+export { default as ImgHomeAd1 } from './ImgHomeAd1';
+export { default as New } from './New';
+export { default as NumberIndicator } from './NumberIndicator';
+
+export { default as PropertyDown } from './PropertyDown';
+export { default as PropertyUp } from './PropertyUp';
 export { default as XGroup2 } from './XGroup2';
