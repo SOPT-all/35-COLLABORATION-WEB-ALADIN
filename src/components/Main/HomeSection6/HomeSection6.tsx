@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import * as S from './HomeSection6.styled';
 import SvgImg61 from '@assets/svgs/Img61';
@@ -14,10 +14,35 @@ import IcRightarrowMediumTextgray40 from '@assets/svgs/IcRightarrowMediumTextgra
 
 const HomeSection6 = () => {
   const section6Scroll = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const handleWheel = (e: React.WheelEvent) => {
-    if (section6Scroll.current) {
-      section6Scroll.current.scrollLeft += e.deltaY;
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - section6Scroll.current!.offsetLeft);
+    setScrollLeft(section6Scroll.current!.scrollLeft);
+    section6Scroll.current!.style.cursor = 'grabbing';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) {
+      return;
+    }
+    const x = e.pageX - section6Scroll.current!.offsetLeft;
+    const scroll = scrollLeft - (x - startX);
+    section6Scroll.current!.scrollLeft = scroll;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    section6Scroll.current!.style.cursor = 'grab';
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      section6Scroll.current!.style.cursor = 'grab';
     }
   };
 
@@ -76,7 +101,13 @@ const HomeSection6 = () => {
           <S.Title>알라딘이 만든 사은품</S.Title>
           <IcRightarrowMediumTextgray40 />
         </S.Section6TitleLayout>
-        <S.Section6CardLayout ref={section6Scroll} onWheel={handleWheel}>
+        <S.Section6CardLayout
+          ref={section6Scroll}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+        >
           {cardData.map((card, id) => (
             <S.Section6CardContainer key={id}>
               {card.img}
@@ -88,5 +119,4 @@ const HomeSection6 = () => {
     </S.Section6>
   );
 };
-
 export default HomeSection6;

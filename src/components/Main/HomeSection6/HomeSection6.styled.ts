@@ -32,10 +32,6 @@ export const Section6CardLayout = styled.div`
   gap: 1.1rem;
   overflow-x: scroll;
   scrollbar-width: none;
-
-  & > div:last-child {
-    padding-right: 16.8rem;
-  }
 `;
 
 export const Section6CardContainer = styled.div`
@@ -48,7 +44,7 @@ export const CardLabel = styled.p`
   display: flex;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 33.6rem;
   height: 3.8rem;
   padding: 1rem 1.2rem;
   align-items: center;
