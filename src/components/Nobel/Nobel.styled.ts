@@ -8,15 +8,24 @@ const commonFlexCenter = `
 
 export const NobelWrapper = styled.div`
   ${commonFlexCenter}
-  width: 100vw;
+  width: 100%;
+  flex-direction: column;
   height: 46rem;
   flex-shrink: 0;
   cursor: default;
+  margin-top: 9.8rem;
+`;
+
+export const NobelMiddleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.1rem;
 `;
 
 export const NobelContainer = styled.div`
   width: 103rem;
   flex-shrink: 0;
+  margin: 0 1.5rem;
 `;
 
 export const NobelTitle = styled.div`

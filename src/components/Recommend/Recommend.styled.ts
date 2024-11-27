@@ -8,15 +8,27 @@ const commonFlexCenter = `
 
 export const RecommendWrapper = styled.div`
   ${commonFlexCenter}
-  width: 100vw;
-  height: 46rem;
+  width: 100%;
+  flex-direction: column;
   flex-shrink: 0;
   cursor: default;
 `;
 
+export const RecommendMiddleWrapper = styled.div`
+  display: flex;
+  height: 49rem;
+  align-items: center;
+  padding-bottom: 5.5rem;
+`;
+
+export const ArrowBtn = styled.div`
+  height: 26.3rem;
+  padding-top: 16rem;
+`;
 export const RecommendContainer = styled.div`
   width: 103rem;
   flex-shrink: 0;
+  margin: 0 1.5rem;
 `;
 
 export const RecommendTitle = styled.div`
