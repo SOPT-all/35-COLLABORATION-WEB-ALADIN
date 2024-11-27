@@ -94,7 +94,9 @@ export const TopBox = styled.section`
     align-items: center;
     height: 5.2rem;
     align-self: stretch;
-    box-shadow: 0 1px 0 ${({ theme }) => theme.colors.stroke_gray10};
+
+    background-color: white;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.stroke_gray10};
   }
 `;
 
