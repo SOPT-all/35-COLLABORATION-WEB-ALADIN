@@ -7,7 +7,7 @@ interface OrderBtnProps {
 
 const OrderBtn = ({ totalItems, totalPrice }: OrderBtnProps) => {
   return (
-    <S.StyledBtn>
+    <S.StyledBtn disabled={totalPrice === 0}>
       {`${totalPrice.toLocaleString()}원 (${totalItems}) 주문하기`}
     </S.StyledBtn>
   );
