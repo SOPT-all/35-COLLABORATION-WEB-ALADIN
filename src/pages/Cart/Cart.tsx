@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getCartList } from '@apis/getCartList';
 import AddressInfo from '@components/Cart/AddressInfo/AddressInfo';
 import CartItem from '@components/Cart/CartItem/CartItem';
 import CartItemHeader from '@components/Cart/CartItemHeader/CartItemHeader';
@@ -9,38 +10,37 @@ import * as S from './Cart.styled';
 import OrderBtn from '@components/Cart/OrderBtn/OrderBtn';
 import GoodsSection from '@components/Cart/GoodsSection/GoodsSection';
 
-// dummy data
-const cartItems = [
-  {
-    id: 1,
-    name: '[국내도서] 가난한 찰리의 연감',
-    discountRate: 10,
-    price: 33000,
-    discountedPrice: 29700,
-    imageUrl: 'https://via.placeholder.com/80x120',
-  },
-  {
-    id: 2,
-    name: '[국내도서] 뭐가 있을까 ..',
-    discountRate: 5,
-    price: 28000,
-    discountedPrice: 26600,
-    imageUrl: 'https://via.placeholder.com/80x120',
-  },
-  {
-    id: 3,
-    name: '[국내도서] 흠냐냥',
-    discountRate: 5,
-    price: 28000,
-    discountedPrice: 26600,
-    imageUrl: 'https://via.placeholder.com/80x120',
-  },
-];
+interface CartItemType {
+  id: number;
+  name: string;
+  discountRate: number;
+  price: number;
+  discountedPrice: number;
+  imageUrl: string;
+}
 
 const Cart = () => {
-  const [selectedItems, setSelectedItems] = useState(
-    new Set(cartItems.map((item) => item.id)),
+  const [cartItems, setCartItems] = useState<CartItemType[]>([]);
+  const [selectedItems, setSelectedItems] = useState<Set<number>>(
+    new Set<number>(),
   );
+
+  useEffect(() => {
+    const fetchCartItems = async () => {
+      try {
+        const items = await getCartList(1);
+        setCartItems(items);
+        const allItemIds = new Set<number>(
+          items.map((item: { id: number }) => item.id),
+        );
+        setSelectedItems(allItemIds);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
+    fetchCartItems();
+  }, []);
 
   const isAllSelected = selectedItems.size === cartItems.length;
 
