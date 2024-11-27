@@ -26,6 +26,7 @@ dist-ssr
 
 #각자 알아서 env 파일 만들고 관리하기 !
 .env
+.yarn/install-state.gz
 
 ### yarn ###
 # used Zero-Install
