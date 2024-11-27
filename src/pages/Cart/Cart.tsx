@@ -78,6 +78,11 @@ const Cart = () => {
   );
   const selectedQty = selectedCartItems.length;
 
+  const shippingFee =
+    selectedTotalDiscountedPrice > 0 && selectedTotalDiscountedPrice < 15000
+      ? 3000
+      : 0;
+
   return (
     <>
       <S.CartSection>
@@ -114,7 +119,10 @@ const Cart = () => {
               </div>
               <S.PriceBox>
                 {selectedTotalDiscountedPrice.toLocaleString()}원 ({selectedQty}
-                ) + 배송비 무료
+                )
+                {shippingFee > 0
+                  ? `+ 배송비 ${shippingFee.toLocaleString()}원`
+                  : '+ 배송비 무료'}
               </S.PriceBox>
             </S.ItemBox>
             <S.DeliveryBox>
@@ -124,7 +132,6 @@ const Cart = () => {
                 discountPrice={
                   selectedTotalPrice - selectedTotalDiscountedPrice
                 }
-                totalPrice={selectedTotalDiscountedPrice}
               />
               <OrderBtn
                 totalItems={selectedQty}
