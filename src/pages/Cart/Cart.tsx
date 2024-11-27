@@ -113,8 +113,8 @@ const Cart = () => {
                 ))}
               </div>
               <S.PriceBox>
-                {selectedTotalPrice.toLocaleString()}원 ({selectedQty}) + 배송비
-                무료
+                {selectedTotalDiscountedPrice.toLocaleString()}원 ({selectedQty}
+                ) + 배송비 무료
               </S.PriceBox>
             </S.ItemBox>
             <S.DeliveryBox>

@@ -6,6 +6,9 @@ interface ShippingInfoProps {
 }
 
 const ShippingInfo = ({ totalPrice }: ShippingInfoProps) => {
+  const percentage =
+    totalPrice >= 15000 ? 100 : Math.round((totalPrice / 15000) * 100);
+
   return (
     <S.ShippingInfoBox>
       {totalPrice >= 15000 ? (
@@ -15,7 +18,7 @@ const ShippingInfo = ({ totalPrice }: ShippingInfoProps) => {
           무료 배송까지 {15000 - totalPrice}원!
         </S.ShippingComment>
       )}
-      <S.DeleveryBar />
+      <S.DeleveryBar percentage={percentage} />
       <S.FreeShippingNotice>
         1만 5천원 이상 구매시 무료배송
       </S.FreeShippingNotice>
