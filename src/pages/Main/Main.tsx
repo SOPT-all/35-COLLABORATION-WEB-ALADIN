@@ -9,6 +9,8 @@ import HomeSection9 from '@components/Main/HomeSection9/HomeSection9';
 import HomeSection11 from '@components/Main/HomeSection11/HomeSection11';
 import BestSeller from '@components/BestSeller/BestSeller';
 import Ad from '@components/Ad/Ad';
+import Nobel from '@components/Nobel/Nobel';
+import Recommend from '@components/Recommend/Recommend';
 
 const Main = () => {
   return (
@@ -16,6 +18,8 @@ const Main = () => {
       <HomeSection1 />
       <BestSeller />
       <Ad />
+      <Nobel />
+      <Recommend />
       <HomeSection6 />
       <HomeSection7 />
       <HomeSection8 />
