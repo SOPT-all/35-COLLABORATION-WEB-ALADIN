@@ -70,9 +70,13 @@ export const CardContainer = styled.div`
   gap: 2rem;
 `;
 
-export const CardImg = styled.div`
+export const CardImg = styled.div<{ $src: string }>`
   width: 17.3rem;
   height: 26.4rem;
+  background-image: url(${({ $src }) => $src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 export const CardLabelAll = styled.div`

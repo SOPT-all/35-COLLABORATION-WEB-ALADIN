@@ -66,9 +66,7 @@ const HomeSection7 = () => {
           <S.Section7BookLayout>
             {bookItems.map((book, id) => (
               <S.CardContainer key={id}>
-                <S.CardImg>
-                  <img src={book.imageUrl} alt={book.name} />
-                </S.CardImg>
+                <S.CardImg $src={book.imageUrl} />
                 <S.CardName>{book.name}</S.CardName>
               </S.CardContainer>
             ))}
