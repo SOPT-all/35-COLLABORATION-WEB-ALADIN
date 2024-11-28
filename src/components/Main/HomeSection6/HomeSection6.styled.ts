@@ -26,11 +26,11 @@ export const Section6TitleLayout = styled.div`
 `;
 
 export const Title = styled.p`
+  margin-left: 24.5rem;
+
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
   flex-shrink: 0;
-
-  margin-left: 24.5rem;
 `;
 
 export const Section6CardLayout = styled.div`
