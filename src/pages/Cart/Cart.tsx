@@ -78,7 +78,12 @@ const Cart = () => {
   );
   const selectedQty = selectedCartItems.length;
 
-  const shippingFee = selectedTotalDiscountedPrice >= 15000 ? 0 : 3000;
+  const shippingFee =
+    selectedTotalDiscountedPrice === 0
+      ? 0
+      : selectedTotalDiscountedPrice >= 15000
+        ? 0
+        : 3000;
 
   return (
     <>
@@ -117,9 +122,9 @@ const Cart = () => {
               <S.PriceBox>
                 {selectedTotalDiscountedPrice.toLocaleString()}원 ({selectedQty}
                 )
-                {shippingFee > 0
-                  ? `+ 배송비 ${shippingFee.toLocaleString()}원`
-                  : '+ 배송비 무료'}
+                {selectedTotalDiscountedPrice > 15000
+                  ? '+ 배송비 무료'
+                  : `+ 배송비 ${shippingFee.toLocaleString()}원`}
               </S.PriceBox>
             </S.ItemBox>
             <S.DeliveryBox>
@@ -129,10 +134,11 @@ const Cart = () => {
                 discountPrice={
                   selectedTotalPrice - selectedTotalDiscountedPrice
                 }
+                shippingFee={shippingFee}
               />
               <OrderBtn
                 totalItems={selectedQty}
-                totalPrice={selectedTotalDiscountedPrice}
+                totalPrice={selectedTotalDiscountedPrice + shippingFee}
               />
             </S.DeliveryBox>
           </S.CartContainer>

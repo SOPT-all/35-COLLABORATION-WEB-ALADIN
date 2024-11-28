@@ -4,10 +4,14 @@ import * as S from './PriceInfo.styled';
 interface PriceInfoProps {
   productPrice: number;
   discountPrice: number;
+  shippingFee: number;
 }
 
-const PriceInfo = ({ productPrice, discountPrice }: PriceInfoProps) => {
-  const shippingFee = productPrice - discountPrice < 15000 ? 3000 : 0;
+const PriceInfo = ({
+  productPrice,
+  discountPrice,
+  shippingFee,
+}: PriceInfoProps) => {
   const totalPrice = productPrice - discountPrice + shippingFee;
 
   return (
