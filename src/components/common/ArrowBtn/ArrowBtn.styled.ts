@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const ArrowBtn = styled.button`
+  display: flex;
   width: 4.2rem;
   height: 4.2rem;
+
   background-color: ${({ theme }) => theme.colors.bg_gray10};
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
