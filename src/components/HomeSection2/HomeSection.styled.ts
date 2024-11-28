@@ -8,8 +8,7 @@ const commonFlexCenter = `
 
 export const HomeSection2Wrapper = styled.div`
   ${commonFlexCenter}
-  flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 55.7rem;
   flex-shrink: 0;
   cursor: default;
@@ -20,20 +19,22 @@ export const HomeSection2Container = styled.div`
   width: 103rem;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0 1.5rem;
 `;
 
 export const HomeSection2Title = styled.div`
   display: flex;
+  position: relative;
+  top: 1.45rem;
 
   color: ${({ theme }) => theme.colors.text_gray20};
   ${({ theme }) => theme.fonts.body1_r_15};
 
   div {
-    display: flex;
-    width: 25.7rem;
-    padding: 1.2rem 1.9rem;
-    justify-content: center;
-    align-items: center;
+    ${commonFlexCenter}
+    width: 25.75rem;
+    padding: 2.5rem 1.9rem;
+    padding-top: 1.2rem;
     gap: 1rem;
     cursor: pointer;
     transition:
@@ -58,8 +59,9 @@ export const HomeSection2Title = styled.div`
 
 export const TypeBox = styled.div`
   display: flex;
+  position: relative;
+  justify-content: center;
   padding: 3rem 11.7rem 1rem;
-  align-items: flex-start;
   gap: 2rem;
   align-self: stretch;
   border-radius: 2rem;
@@ -87,12 +89,37 @@ export const BookTitle = styled.div`
   margin-top: 2rem;
 
   color: ${({ theme }) => theme.colors.text_gray40};
+
   ${({ theme }) => theme.fonts.title2_b_17};
+
+  &.aladingoods {
+    width: 20.6rem;
+    height: 2.1rem;
+  }
 `;
 
 export const BookBox = styled.div`
   width: 17.9rem;
+  height: 33.8rem;
   padding: 2rem;
-  align-items: flex-start;
   gap: 2rem;
+
+  &.aladingoods {
+    display: flex;
+    width: 24.6rem;
+    height: 33.8rem;
+    flex-direction: column;
+
+    img {
+      width: 20.6rem;
+      height: 18.6123rem;
+      flex-shrink: 0;
+    }
+  }
+`;
+
+export const ArrowBtnWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 6rem;
 `;

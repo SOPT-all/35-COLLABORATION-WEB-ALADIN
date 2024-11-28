@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { instance } from '@apis/apis';
 import * as S from './HomeSection.styled';
+import ArrowBtn from '@components/common/ArrowBtn/ArrowBtn';
+import { HomeSection2Indicator } from '@assets/svgs';
 
 const HomeSection2 = () => {
   const [books, setBooks] = useState<any>({
@@ -39,6 +41,9 @@ const HomeSection2 = () => {
 
   return (
     <S.HomeSection2Wrapper>
+      <S.ArrowBtnWrapper>
+        <ArrowBtn direction="left" />
+      </S.ArrowBtnWrapper>
       <S.HomeSection2Container>
         <S.HomeSection2Title>
           <div
@@ -70,17 +75,30 @@ const HomeSection2 = () => {
         <S.TypeBox>
           {books[currentType] && books[currentType].length > 0 ? (
             books[currentType].map((book: any) => (
-              <S.BookBox key={book.id}>
+              <S.BookBox
+                key={book.id}
+                className={currentType === 'ALADINGOODS' ? 'aladingoods' : ''}
+              >
                 <img src={book.imageUrl} alt={book.title} />
-                <S.BookTitle>{book.title}</S.BookTitle>
+                <S.BookTitle
+                  className={currentType === 'ALADINGOODS' ? 'aladingoods' : ''}
+                >
+                  {book.title}
+                </S.BookTitle>
                 <p>{book.description}</p>
               </S.BookBox>
             ))
           ) : (
             <p>로딩중 🧞‍♂️</p>
           )}
+          <HomeSection2Indicator
+            style={{ position: 'absolute', bottom: '1rem' }}
+          />
         </S.TypeBox>
       </S.HomeSection2Container>
+      <S.ArrowBtnWrapper>
+        <ArrowBtn direction="right" />
+      </S.ArrowBtnWrapper>
     </S.HomeSection2Wrapper>
   );
 };
