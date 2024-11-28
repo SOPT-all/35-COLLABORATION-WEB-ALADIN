@@ -4,14 +4,12 @@ import * as S from './PriceInfo.styled';
 interface PriceInfoProps {
   productPrice: number;
   discountPrice: number;
-  totalPrice: number;
 }
 
-const PriceInfo = ({
-  productPrice,
-  discountPrice,
-  totalPrice,
-}: PriceInfoProps) => {
+const PriceInfo = ({ productPrice, discountPrice }: PriceInfoProps) => {
+  const shippingFee = productPrice - discountPrice < 15000 ? 3000 : 0;
+  const totalPrice = productPrice - discountPrice + shippingFee;
+
   return (
     <S.PriceInfoWrapper>
       <S.PriceInfoContainer>
@@ -25,7 +23,7 @@ const PriceInfo = ({
         </S.TextBox>
         <S.TextBox gap="10.2rem">
           <S.Title>배송비</S.Title>
-          <S.Content>0원</S.Content>
+          <S.Content>{shippingFee.toLocaleString()}원</S.Content>
         </S.TextBox>
       </S.PriceInfoContainer>
       <S.TotalPriceBox>

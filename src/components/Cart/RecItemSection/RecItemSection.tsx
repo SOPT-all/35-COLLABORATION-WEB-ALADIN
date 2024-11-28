@@ -8,7 +8,8 @@ import {
 import * as S from './RecItemSection.styled';
 import { REC_BOOKS } from '@constants/RecBooksConstants';
 import { Book } from '@constants/RecBooksConstants';
-import ArrowBtn from '@components/common/ArrowBtn/ArrowBtn';
+import ArrowLeftButton from '@components/common/Button/ArrowLeftButton/ArrowLeftButton';
+import ArrowRightButton from '@components/common/Button/ArrowRightButton/ArrowRightButton';
 
 const RecItemSection = () => {
   const [isHeartHovered, setHeartHovered] = useState<number | null>(null);
@@ -16,7 +17,7 @@ const RecItemSection = () => {
 
   return (
     <S.RecItemSectionWrapper>
-      <ArrowBtn direction="left" />
+      <ArrowLeftButton />
       <S.RecItemContainer>
         <h1>지금 장바구니에 담은 상품과 함께 구매한 상품입니다.</h1>
         <S.RecItemBox>
@@ -52,7 +53,7 @@ const RecItemSection = () => {
           ))}
         </S.RecItemBox>
       </S.RecItemContainer>
-      <ArrowBtn direction="right" />
+      <ArrowRightButton />
     </S.RecItemSectionWrapper>
   );
 };

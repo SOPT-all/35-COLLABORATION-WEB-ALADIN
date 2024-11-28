@@ -7,7 +7,10 @@ export const CartSection = styled.section`
 `;
 
 export const CartWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 6.6rem 0;
+  justify-content: center;
 
   & h1 {
     margin-bottom: 1.5rem;

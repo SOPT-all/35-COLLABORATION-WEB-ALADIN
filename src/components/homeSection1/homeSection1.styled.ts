@@ -10,7 +10,7 @@ const commonFlexCenter = `
 export const HomeSectionWrapper = styled.div`
   ${commonFlexCenter}
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 55.7rem;
   flex-shrink: 0;
   background: linear-gradient(180deg, #fff 0%, #f2f2f4 100%);
