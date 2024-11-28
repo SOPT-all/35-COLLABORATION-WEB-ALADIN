@@ -80,7 +80,7 @@ const Cart = () => {
 
   const shippingFee =
     selectedTotalDiscountedPrice === 0
-      ? 3000 // 또는 기본 배송비를 설정할 수도 있음
+      ? 3000
       : selectedTotalDiscountedPrice < 15000
         ? 3000
         : 0;
