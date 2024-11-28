@@ -148,17 +148,17 @@ const Header = () => {
           <S.HeaderBottomItem>북플</S.HeaderBottomItem>
           <S.HeaderBottomItem>서재</S.HeaderBottomItem>
           <S.HeaderBottomItem>창작 플랫폼</S.HeaderBottomItem>
+          {isShow && (
+            <S.CloseBtn
+              onClick={() => {
+                setIsShow(false);
+              }}
+            >
+              <XGroup2 />
+            </S.CloseBtn>
+          )}
         </S.HeaderBottomItemLayout>
       </S.HeaderBottom>
-      {isShow && (
-        <S.CloseBtn
-          onClick={() => {
-            setIsShow(false);
-          }}
-        >
-          <XGroup2 />
-        </S.CloseBtn>
-      )}
       {isShow && (
         <S.DropDownWrapper>
           <S.DropDownLayout>
