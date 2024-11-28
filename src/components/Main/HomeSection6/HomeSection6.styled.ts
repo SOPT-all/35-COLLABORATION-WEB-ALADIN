@@ -26,7 +26,7 @@ export const Section6TitleLayout = styled.div`
 `;
 
 export const Title = styled.p`
-  margin-left: 24.5rem;
+  margin-left: 16.6rem;
 
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
@@ -39,7 +39,7 @@ export const Section6CardLayout = styled.div`
   gap: 1.1rem;
   overflow-x: scroll;
   scrollbar-width: none;
-  max-width: 100vw;
+  max-width: 100%;
 `;
 
 export const Section6CardContainer = styled.div`
@@ -52,7 +52,7 @@ export const CardLabel = styled.p`
   display: flex;
   position: absolute;
   bottom: 0;
-  width: 33.6rem;
+  width: 36.6rem;
   height: 3.8rem;
   padding: 1rem 1.2rem;
   align-items: center;
