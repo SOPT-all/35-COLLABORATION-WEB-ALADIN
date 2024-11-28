@@ -4,14 +4,15 @@ import {
   HomeSection2Indicator,
 } from '@assets/svgs';
 import { RecommendbookList } from '../../constants/recommend';
-import ArrowBtn from '@components/common/ArrowBtn/ArrowBtn';
+import ArrowLeftButton from '@components/common/Button/ArrowLeftButton/ArrowLeftButton';
+import ArrowRightButton from '@components/common/Button/ArrowRightButton/ArrowRightButton';
 
 const Recommend = () => {
   return (
     <S.RecommendWrapper>
       <S.RecommendMiddleWrapper>
         <S.ArrowBtn>
-          <ArrowBtn direction="left" />
+          <ArrowLeftButton />
         </S.ArrowBtn>
         <S.RecommendContainer>
           <S.RecommendTitle>
@@ -35,7 +36,7 @@ const Recommend = () => {
           </S.BookList>
         </S.RecommendContainer>
         <S.ArrowBtn>
-          <ArrowBtn direction="right" />
+          <ArrowRightButton />
         </S.ArrowBtn>
       </S.RecommendMiddleWrapper>
       <HomeSection2Indicator />

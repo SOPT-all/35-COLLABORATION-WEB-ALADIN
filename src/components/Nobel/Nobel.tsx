@@ -4,13 +4,14 @@ import {
   HomeSection2Indicator,
 } from '@assets/svgs';
 import { NobelBookList } from '../../constants/nobel';
-import ArrowBtn from '@components/common/ArrowBtn/ArrowBtn';
+import ArrowLeftButton from '@components/common/Button/ArrowLeftButton/ArrowLeftButton';
+import ArrowRightButton from '@components/common/Button/ArrowRightButton/ArrowRightButton';
 
 const Nobel = () => {
   return (
     <S.NobelWrapper>
       <S.NobelMiddleWrapper>
-        <ArrowBtn direction="left" />
+        <ArrowLeftButton />
         <S.NobelContainer>
           <S.NobelTitle>
             한강 2024 노벨문학상 수상
@@ -28,7 +29,7 @@ const Nobel = () => {
             ))}
           </S.BookList>
         </S.NobelContainer>
-        <ArrowBtn direction="right" />
+        <ArrowRightButton />
       </S.NobelMiddleWrapper>
       <HomeSection2Indicator />
     </S.NobelWrapper>
