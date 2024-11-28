@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const HeaderWrapper = styled.header`
   display: flex;
-  position: relative;
   width: 100%;
   height: 19.5rem;
   flex-direction: column;
@@ -12,6 +11,7 @@ export const HeaderWrapper = styled.header`
   background: ${({ theme }) => theme.colors.white};
 
   box-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+  cursor: default;
 `;
 
 export const HeaderTop = styled.div`
@@ -164,6 +164,7 @@ export const HeaderRightItem = styled.div`
 
 export const HeaderBottom = styled.div`
   display: flex;
+  position: relative;
   width: 103rem;
   height: 4.5rem;
   padding: 10px 0 15px;
@@ -183,6 +184,7 @@ export const SeeBtn = styled.button<{ $isShow: boolean }>`
 
   color: ${({ theme, $isShow }) =>
     $isShow ? theme.colors.purple50 : theme.colors.text_gray40};
+  white-space: nowrap;
   ${({ theme }) => theme.fonts.body5_b_13};
 
   svg path {
@@ -207,7 +209,12 @@ export const HeaderBottomItem = styled.div`
 
   color: ${({ theme }) => theme.colors.text_gray10};
   white-space: nowrap;
+
   ${({ theme }) => theme.fonts.body5_b_13};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.purple40};
+  }
 `;
 
 /**
@@ -217,8 +224,7 @@ export const HeaderBottomItem = styled.div`
 export const DropDownWrapper = styled.div`
   display: flex;
   position: absolute;
-  bottom: -57.4rem;
-  left: 24.2rem;
+  top: 18rem;
   z-index: 10;
   height: 58.4rem;
   padding: 1rem;
@@ -305,9 +311,6 @@ export const OneCategory = styled.div<{ $isBold: boolean }>`
 
 export const CloseBtn = styled.button`
   display: flex;
-  position: absolute;
-  top: 14.5rem;
-  right: 23.3rem;
   z-index: 10;
   width: 3rem;
   height: 3rem;

@@ -1,7 +1,17 @@
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
-export const CartWrapper = styled.section`
+export const CartSection = styled.section`
+  display: flex;
+  justify-content: center;
+`;
+
+export const CartWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 6.6rem 0;
+  justify-content: center;
+
   & h1 {
     margin-bottom: 1.5rem;
 
@@ -14,11 +24,13 @@ export const ItemBox = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 `;
+
 export const DeliveryBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 `;
+
 export const CartContainer = styled.div`
   display: flex;
   gap: 1.5rem;

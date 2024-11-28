@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
 
-export const StyledBtn = styled.button`
-  width: 25rem;
-  height: 5.6rem;
-
+export const StyledBtn = styled.button<{ disabled: boolean }>`
   width: 25rem;
   height: 5.6rem;
 
@@ -27,4 +24,15 @@ export const StyledBtn = styled.button`
 
     color: ${theme.colors.purple40};
   }
+
+  ${({ disabled }) =>
+    disabled &&
+    `
+    background-color: ${theme.colors.stroke_gray40}; 
+    pointer-events: none; 
+
+    &:active {
+      transform: none; 
+    }
+  `}
 `;
