@@ -2,8 +2,11 @@ import styled from '@emotion/styled';
 
 export const Section6 = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 3.5rem;
+  margin-bottom: 10.5rem;
 `;
 
 export const Section6CardWrapper = styled.div`
@@ -19,11 +22,15 @@ export const Section6TitleLayout = styled.div`
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  margin-top: 7rem;
 `;
 
 export const Title = styled.p`
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
+  flex-shrink: 0;
+
+  margin-left: 24.5rem;
 `;
 
 export const Section6CardLayout = styled.div`
@@ -32,6 +39,7 @@ export const Section6CardLayout = styled.div`
   gap: 1.1rem;
   overflow-x: scroll;
   scrollbar-width: none;
+  max-width: 100vw;
 `;
 
 export const Section6CardContainer = styled.div`
