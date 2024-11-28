@@ -91,3 +91,14 @@ export { default as NumberIndicator } from './NumberIndicator';
 export { default as PropertyDown } from './PropertyDown';
 export { default as PropertyUp } from './PropertyUp';
 export { default as XGroup2 } from './XGroup2';
+
+export { default as Img41 } from './Img41';
+export { default as Img42 } from './Img42';
+export { default as Img43 } from './Img43';
+export { default as Img44 } from './Img44';
+export { default as Img45 } from './Img45';
+export { default as Img51 } from './Img51';
+export { default as Img52 } from './Img52';
+export { default as Img53 } from './Img53';
+export { default as Img54 } from './Img54';
+export { default as Img55 } from './Img55';
