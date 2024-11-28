@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { instance } from '@apis/apis';
 import * as S from './HomeSection.styled';
-import ArrowBtn from '@components/common/ArrowBtn/ArrowBtn';
 import { HomeSection2Indicator } from '@assets/svgs';
+import ArrowLeftButton from '@components/common/Button/ArrowLeftButton/ArrowLeftButton';
+import ArrowRightButton from '@components/common/Button/ArrowRightButton/ArrowRightButton';
 
 const HomeSection2 = () => {
   const [books, setBooks] = useState<any>({
@@ -42,7 +43,7 @@ const HomeSection2 = () => {
   return (
     <S.HomeSection2Wrapper>
       <S.ArrowBtnWrapper>
-        <ArrowBtn direction="left" />
+        <ArrowLeftButton />
       </S.ArrowBtnWrapper>
       <S.HomeSection2Container>
         <S.HomeSection2Title>
@@ -97,7 +98,7 @@ const HomeSection2 = () => {
         </S.TypeBox>
       </S.HomeSection2Container>
       <S.ArrowBtnWrapper>
-        <ArrowBtn direction="right" />
+        <ArrowRightButton />
       </S.ArrowBtnWrapper>
     </S.HomeSection2Wrapper>
   );
