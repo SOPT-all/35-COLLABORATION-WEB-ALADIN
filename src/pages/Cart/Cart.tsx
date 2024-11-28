@@ -79,9 +79,13 @@ const Cart = () => {
   const selectedQty = selectedCartItems.length;
 
   const shippingFee =
-    selectedTotalDiscountedPrice > 0 && selectedTotalDiscountedPrice < 15000
+    selectedTotalDiscountedPrice === 0
       ? 3000
-      : 0;
+      : selectedTotalDiscountedPrice < 15000
+        ? 3000
+        : 0;
+
+  console.log(shippingFee);
 
   return (
     <>

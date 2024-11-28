@@ -65,9 +65,18 @@ export const BtnLayout = styled.div`
 
 export const CardContainer = styled.div`
   display: flex;
+  padding: 2rem 0;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem 0;
+`;
+
+export const CardImg = styled.div<{ $src: string }>`
+  width: 17.3rem;
+  height: 26.4rem;
+  background-image: url(${({ $src }) => $src});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 export const CardLabelAll = styled.div`
