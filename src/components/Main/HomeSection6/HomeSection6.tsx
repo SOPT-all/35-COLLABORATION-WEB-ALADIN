@@ -96,26 +96,26 @@ const HomeSection6 = () => {
 
   return (
     <S.Section6>
-      <S.Section6CardWrapper>
-        <S.Section6TitleLayout>
-          <S.Title>알라딘이 만든 사은품</S.Title>
-          <IcRightarrowMediumTextgray40 />
-        </S.Section6TitleLayout>
-        <S.Section6CardLayout
-          ref={section6Scroll}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseLeave}
-        >
-          {cardData.map((card, id) => (
-            <S.Section6CardContainer key={id}>
-              {card.img}
-              <S.CardLabel>{card.label}</S.CardLabel>
-            </S.Section6CardContainer>
-          ))}
-        </S.Section6CardLayout>
-      </S.Section6CardWrapper>
+      <S.Section6TitleLayout>
+        <S.Title>알라딘이 만든 사은품</S.Title>
+        <IcRightarrowMediumTextgray40 />
+      </S.Section6TitleLayout>
+      <S.Section6CardLayout
+        ref={section6Scroll}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div style={{ width: '22.5rem', flexShrink: '0' }} />
+        {cardData.map((card, id) => (
+          <S.Section6CardContainer key={id}>
+            {card.img}
+            <S.CardLabel>{card.label}</S.CardLabel>
+          </S.Section6CardContainer>
+        ))}
+        <div style={{ width: '22.5rem', flexShrink: '0' }} />
+      </S.Section6CardLayout>
     </S.Section6>
   );
 };
