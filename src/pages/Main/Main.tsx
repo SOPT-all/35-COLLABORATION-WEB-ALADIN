@@ -11,11 +11,13 @@ import BestSeller from '@components/BestSeller/BestSeller';
 import Ad from '@components/Ad/Ad';
 import Nobel from '@components/Nobel/Nobel';
 import Recommend from '@components/Recommend/Recommend';
+import HomeSection2 from '@components/HomeSection2/HomeSection2';
 
 const Main = () => {
   return (
     <S.MainWrapper>
       <HomeSection1 />
+      <HomeSection2 />
       <BestSeller />
       <Ad />
       <Nobel />
