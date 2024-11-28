@@ -130,7 +130,7 @@ export const ImgWriter = styled.p`
 
 export const ProgressLayout = styled.div`
   ${commonFlexCenter}
-  width: 100vw;
+  width: 100%;
   gap: 3.8rem;
 
   background-color: ${theme.colors.white};
