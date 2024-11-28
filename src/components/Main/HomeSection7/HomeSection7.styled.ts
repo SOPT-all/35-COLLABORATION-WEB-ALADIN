@@ -65,9 +65,14 @@ export const BtnLayout = styled.div`
 
 export const CardContainer = styled.div`
   display: flex;
+  padding: 2rem 0;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem 0;
+`;
+
+export const CardImg = styled.div`
+  width: 17.3rem;
+  height: 26.4rem;
 `;
 
 export const CardLabelAll = styled.div`
