@@ -10,7 +10,7 @@ export const BestSellerWrapper = styled.div`
   ${commonFlexCenter}
   flex-direction: column;
   width: 100%;
-  height: 55.7rem;
+  height: 32rem;
   flex-shrink: 0;
   cursor: default;
 `;

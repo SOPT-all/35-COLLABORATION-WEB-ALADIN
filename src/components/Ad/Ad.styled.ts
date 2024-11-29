@@ -10,6 +10,7 @@ export const AdWrapper = styled.div`
   cursor: default;
   align-self: stretch;
   background: ${({ theme }) => theme.colors.bg_banner_green};
+  margin-top: 8rem;
 `;
 
 export const AdContainer = styled.div`
