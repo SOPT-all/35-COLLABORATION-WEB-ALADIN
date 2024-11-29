@@ -55,7 +55,7 @@ const HomeSection11 = () => {
         <S.Wrapper1>
           <S.Layer1>
             <S.Title1>알라디너 TV</S.Title1>
-            <IcRightarrowMediumTextgray40 />
+            <IcRightarrowMediumTextgray40 style={{ height: '2.3rem' }} />
           </S.Layer1>
           <S.Container1>
             {cardData.map((card) => (
@@ -73,7 +73,7 @@ const HomeSection11 = () => {
         <S.Wrapper2>
           <S.Layer2>
             <S.Title2>작가와의 만남</S.Title2>
-            <IcRightarrowMediumTextgray40 />
+            <IcRightarrowMediumTextgray40 style={{ height: '2.3rem' }} />
           </S.Layer2>
           <S.Container2>
             {talkData.map((talk) => (
