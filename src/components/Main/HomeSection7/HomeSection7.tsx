@@ -56,7 +56,7 @@ const HomeSection7 = () => {
           <S.Section7TitleLayout>
             <S.Section7TitleContainer>
               <S.Title>멤버십 선정 이달의 책 TOP 10</S.Title>
-              <IcRightarrowMediumTextgray40 style={{ height: '2.4rem' }} />
+              <IcRightarrowMediumTextgray40 style={{ height: '1.8rem' }} />
             </S.Section7TitleContainer>
             <S.Section7LabelContainer>
               <SvgIcPick />
