@@ -10,7 +10,7 @@ import {
   XGroup2,
 } from '@assets/svgs';
 import { SerachUnder } from '@assets/svgs';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { instance } from '@apis/apis';
 
 type Categories = {
@@ -38,6 +38,7 @@ type ApiResponse = {
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isShow, setIsShow] = useState(false);
   const [headerMenuCategories, setHeaderMenuCategories] =
     useState<Categories>();
@@ -57,6 +58,10 @@ const Header = () => {
     };
     fetchHeaderData();
   }, []);
+
+  useEffect(() => {
+    setIsShow(false);
+  }, [location]);
 
   return (
     <S.HeaderWrapper>

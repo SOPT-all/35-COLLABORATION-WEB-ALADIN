@@ -53,7 +53,7 @@ const HomeSection10 = () => {
         <S.Section10Wrapper>
           <S.Section10Title>
             <S.Title>알라딘 오디오 북</S.Title>
-            <IcRightarrowMediumTextgray40 />
+            <IcRightarrowMediumTextgray40 style={{ height: '2.3rem' }} />
           </S.Section10Title>
           <S.Section10Layer>
             <S.Section10Container>
