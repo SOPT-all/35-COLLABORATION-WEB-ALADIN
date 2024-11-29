@@ -107,14 +107,25 @@ const HomeSection6 = () => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
       >
-        <div style={{ width: '15.8rem', flexShrink: '0' }} />
+        <div
+          style={{
+            width: 'calc((100% - 105rem) / 2)',
+            flexShrink: '0',
+          }}
+        />
+
         {cardData.map((card, id) => (
           <S.Section6CardContainer key={id}>
             {card.img}
             <S.CardLabel>{card.label}</S.CardLabel>
           </S.Section6CardContainer>
         ))}
-        <div style={{ width: '15.8rem', flexShrink: '0' }} />
+        <div
+          style={{
+            width: 'calc((100% - 105rem) / 2)',
+            flexShrink: '0',
+          }}
+        />
       </S.Section6CardLayout>
     </S.Section6>
   );

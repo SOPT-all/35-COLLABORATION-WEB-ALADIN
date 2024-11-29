@@ -20,13 +20,14 @@ export const Section6CardWrapper = styled.div`
 
 export const Section6TitleLayout = styled.div`
   display: flex;
+  width: 100%;
+  margin-top: 7rem;
   align-items: center;
   gap: 0.8rem;
-  margin-top: 7rem;
 `;
 
-export const Title = styled.p`
-  margin-left: 16.6rem;
+export const Title = styled.div`
+  margin-left: calc((100% - 103rem) / 2);
 
   ${({ theme }) => theme.fonts.head_b_24};
   color: ${({ theme }) => theme.colors.text_gray40};
