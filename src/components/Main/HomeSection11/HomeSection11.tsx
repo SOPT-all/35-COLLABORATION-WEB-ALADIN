@@ -73,7 +73,7 @@ const HomeSection11 = () => {
         <S.Wrapper2>
           <S.Layer2>
             <S.Title2>작가와의 만남</S.Title2>
-            <IcRightarrowMediumTextgray40 style={{ height: '2.3rem' }} />
+            <IcRightarrowMediumTextgray40 style={{ height: '1.8rem' }} />
           </S.Layer2>
           <S.Container2>
             {talkData.map((talk) => (
