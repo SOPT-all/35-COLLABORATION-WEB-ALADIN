@@ -98,7 +98,7 @@ const HomeSection6 = () => {
     <S.Section6>
       <S.Section6TitleLayout>
         <S.Title>알라딘이 만든 사은품</S.Title>
-        <IcRightarrowMediumTextgray40 style={{ height: '2.4rem' }} />
+        <IcRightarrowMediumTextgray40 style={{ height: '1.8rem' }} />
       </S.Section6TitleLayout>
       <S.Section6CardLayout
         ref={section6Scroll}

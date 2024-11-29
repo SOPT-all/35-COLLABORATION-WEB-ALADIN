@@ -18,7 +18,7 @@ const BestSeller = () => {
     <S.BestSellerWrapper>
       <S.BestSellerTitle>
         <p>어제 베스트 셀러 TOP 10</p>
-        <IcRightarrowMediumTextgray40 style={{ height: '2.6rem' }} />
+        <IcRightarrowMediumTextgray40 style={{ height: '1.8rem' }} />
       </S.BestSellerTitle>
       <S.BestSellerContainer>
         <S.Top2Box>
