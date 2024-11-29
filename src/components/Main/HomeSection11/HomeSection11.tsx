@@ -55,7 +55,7 @@ const HomeSection11 = () => {
         <S.Wrapper1>
           <S.Layer1>
             <S.Title1>알라디너 TV</S.Title1>
-            <IcRightarrowMediumTextgray40 style={{ height: '2.3rem' }} />
+            <IcRightarrowMediumTextgray40 style={{ height: '1.8rem' }} />
           </S.Layer1>
           <S.Container1>
             {cardData.map((card) => (
